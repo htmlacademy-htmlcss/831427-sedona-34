@@ -49,6 +49,7 @@
       <section class="catalog-products">
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -70,8 +71,8 @@
               </label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="catalog-filter-group">
+          </fieldset>
+          <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Тип жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -79,19 +80,20 @@
                 <input class="control-input" type="radio" name="hotel" checked>
                 Гостиница
               </label>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="motel">
+            </li>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="control-input" type="radio" name="motel">
                   Мотель
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="wi-fi">
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="control-input" type="radio" name="wi-fi">
                   Апартаменты
-                </label>
-              </li>
-            </fieldset>
+              </label>
+            </li>
+          </fieldset>
 
 <!-- Здесь должен быть блок выбора стоимости гостиницы с бегунком -->
 
@@ -200,7 +202,7 @@
           </ul>
           <p>Гостиниц на странице:</p>
           <select class="select-control" name="number-of-hotels">
-            <option value="cheap">4</option>
+            <option value="4">4</option>
           </select>
         </section>
       </main>
