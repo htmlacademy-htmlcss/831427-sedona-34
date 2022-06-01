@@ -22,6 +22,18 @@ body {
   color: #333333;
 }
 
+.button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+  background-color: #82B3D3;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 /* Pages */
 
 .page-header {
@@ -151,16 +163,6 @@ body {
   line-height: 26px;
   color: #FFFFFF;
   font-weight: 400;
-}
-
-.subscribe-button {
-  font-size: 20px;
-  line-height: 36px;
-  color: #FFFFFF;
-  background-color: #82B3D3;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .footer-contacts-phone {
