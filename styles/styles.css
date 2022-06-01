@@ -18,4 +18,156 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Pages */
+
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  background-color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.page-main {
+  background-image: url("../images/background/background-index.jpg");
+  color: #000000;
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.advantages-slogan {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-text {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.advantages-list {
+  text-align: center;
+}
+
+.advantages-text-item {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages-number {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.advantages-value-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages-value-description {
+  font-weight: 400;
+}
+
+.search-hotel {
+  text-align: center;  
+}
+
+.search-hotel-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-hotel-description {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.search-hotel-link {
+  font-size: 20px;
+  line-height: 36px;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer-subscribe {
+  text-align: center;
+  background-color: #82B3D3;
+}
+
+.page-footer-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page-footer-description {
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.subscribe-button {
+  font-size: 20px;
+  line-height: 36px;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer-contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
 }
