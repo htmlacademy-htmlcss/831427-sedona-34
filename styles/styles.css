@@ -143,7 +143,7 @@ body {
 .search-hotel-link {
   font-size: 20px;
   line-height: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
@@ -152,27 +152,23 @@ body {
 
 .footer-subscribe {
   text-align: center;
-  background-image: url("../images/background/background-subscribe.jpg");
   height: 411px;
   width: 1200px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
 }
 
 .footer-subscribe-first {
-  background-color: #82B3D3;
+  color: #ffffff;
+  background-color: #000000;
+  background-image: url("../images/background/background-subscribe.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .page-footer-title {
   font-size: 30px;
   line-height: 36px;
-  color: #FFFFFF;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.page-footer-description {
-  color: #FFFFFF;
 }
 
 .footer-contacts-phone {
