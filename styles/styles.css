@@ -60,7 +60,7 @@ body {
 
 .page-main-container {
   background-image: url("../images/background/background-index.jpg");
-  background-size: 100% auto;
+  background-size: contain;
   background-repeat: no-repeat;
   height: 485px;
   width: 1200px;
@@ -160,7 +160,7 @@ body {
   color: #ffffff;
   background-color: #000000;
   background-image: url("../images/background/background-subscribe.jpg");
-  background-size: 100% auto;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -184,7 +184,7 @@ body {
   color: #ffffff;
   background-color: #000000;
   background-image: url("../images/background/background-filter.jpg");
-  background-size: 100% auto;
+  background-size: contain;
   background-repeat: no-repeat;
   height: 393px;
   width: 1200px;
