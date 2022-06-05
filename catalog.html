@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <div class="body-container">
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
@@ -48,7 +49,7 @@
           </li>
         </ol>
       </header>
-      <section class="catalog-products">
+      <section class="main-filter">
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
@@ -104,11 +105,12 @@
             <button class="button button-reset" type="reset">Сбросить</button>
           </form>
       </div>
-          <p class="search-results">Найдено гостиниц: 38</p>
-          <select class="select-control" name="sorting" aria-label="Сортировка">
+      <section class="catalog-products">
+        <p class="search-results">Найдено гостиниц: 38</p>
+        <select class="select-control" name="sorting" aria-label="Сортировка">
             <option value="cheap">Сначала дешёвые</option>
-          </select>
-          <ul class="sorting-list">
+        </select>
+         <ul class="sorting-list">
             <li class="sorting-item">
               <a class="button" href="#">
                 <span class="visually-hidden">Показать карточки</span>
@@ -124,8 +126,8 @@
                 <span class="visually-hidden">Показать список</span>
               </a>
             </li>
-          </ul>
-          <ul class="product-list">
+         </ul>
+         <ul class="product-list">
             <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" alt="Amara Resort & Spa." src="images/catalog/hotel-amara-resort.jpg" width="300" height="211">
@@ -182,8 +184,8 @@
               <a class="product-card-star-link" href="#" ><span class="visually-hidden">2 звезды</span></a>
               <p class="product-card-score">Рейтинг: 5,0</p>
             </li>
-          </ul>
-          <ul class="pagination">
+         </ul>
+         <ul class="pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-current">1</a>
             </li>
@@ -203,19 +205,19 @@
               <a class="pagination-link" href="#">10</a>
             </li>
           </ul>
-          <p class="number-hotels">Гостиниц на странице:</p>
-          <select class="select-control" name="number-of-hotels">
+        <p class="number-hotels">Гостиниц на странице:</p>
+        <select class="select-control" name="number-of-hotels">
             <option value="4">4</option>
-          </select>
-        </section>
-      </main>
+        </select>
+      </section>
+    </main>
     <footer class="page-footer">
-      <section class="footer-subscribe footer-subscribe-second">
-        <h2 class="page-footer-title page-footer-title-second">Подпишитесь на рассылку</h2>
-        <p class="page-footer-description page-footer-description-second">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <section class="footer-subscribe subscribe-second">
+        <h2 class="page-footer-title footer-title-second">Подпишитесь на рассылку</h2>
+        <p class="page-footer-description footer-description-second">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="field"  placeholder="Ваш e-mail" type="email" required>
-          <button class="button subscribe-button" type="submit">Подписаться</button>
+          <button class="button button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
       <section class="footer-contacts">
@@ -243,5 +245,6 @@
         </a>
       </section>
     </footer>
+    </div>
   </body>
 </html>
