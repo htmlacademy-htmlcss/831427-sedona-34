@@ -14,17 +14,28 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
   color: #000000;
-  background-color: #f2f2f2;
 }
 
 .body-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -57,6 +68,10 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   text-transform: capitalize;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .navigation-link-want {
