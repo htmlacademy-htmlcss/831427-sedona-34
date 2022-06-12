@@ -374,6 +374,12 @@ body {
 
 .product-list {
   list-style-type: none;
+  /* Пока скрыла, так как в этом д/з нужна была только сетка крупных блоков
+  display: flex;
+  margin: 0;
+  padding: 0;
+  */
+  width: 1056px;
 }
 
 .product-card-link {
@@ -449,6 +455,20 @@ body {
   width: 519px;
 }
 
+.pagination-container {
+  display: flex;
+  width: 1056px;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  width: 370px;
+  margin: 0;
+  padding: 0;
+}
+
 .pagination-item {
   font-size: 20px;
   line-height: 36px;
@@ -456,6 +476,7 @@ body {
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
+  width: 55px;
 }
 
 .pagination-link {
@@ -469,10 +490,26 @@ body {
   background-color: #F2F2F2;
 }
 
+.number-hotels-container {
+  display: flex;
+  width: 386px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+}
+
+.select-control-second {
+  width: 160px;
+  padding: 14px 43px 13px 19px;
+}
+
 .number-hotels {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  width: 175px;
+  margin: 0;
+  padding: 0;
 }
 
 .subscribe-second {
