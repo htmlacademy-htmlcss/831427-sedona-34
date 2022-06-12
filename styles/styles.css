@@ -116,25 +116,53 @@ body {
   background-color: #ffffff;
 }
 
+.page-main-image {
+  display: block;
+  margin: 0 auto;
+  padding: 51px 371px 82px;
+}
+
 .advantages-slogan {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  width: 620px;
+  margin: 0;
+  padding: 69px 290px 25px;
 }
 
 .advantages-text {
   text-align: center;
+  color: #333333;
+  margin: 0;
+  /* Почему-то при указании ширины и(или) отступов текст блока не вмещается и переносится на вторую строку :(
+  Хотя все параметры шрифта и размеры отступов соответствуют макету:
+  width: 653px;
+  padding: 0 274px 90px 273px;
+  Пробовала добавлять ширину всему блоку advantages, не помогло
+  */
+
 }
 
 .advantages-list {
+  display: flex;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.advantages-image {
+  width: 800px;
 }
 
 .advantages-text-item {
   color: #FFFFFF;
   background-color: #82B3D3;
+  width: 400px;
 }
 
 .advantages-title {
@@ -152,6 +180,11 @@ body {
 .advantages-description {
   font-size: 18px;
   line-height: 21px;
+}
+
+.advantages-value-list {
+  list-style-type: none;
+  display: flex;
 }
 
 .advantages-value-title {
@@ -184,13 +217,21 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+  padding: 91px 452px 29px 451px;
 }
 
 .search-hotel-description {
   color: #333333;
+  margin: 0;
+  padding: 0 304px 55px;
 }
 
 .search-hotel-link {
+  display: block;
+  width: 574px;
+  margin: 0 313px 93px;
+  padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
   color: #ffffff;
@@ -219,6 +260,9 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  width: 404px;
+  margin: 0;
+  padding: 94px 398px 29px;
 }
 
 .button-subscribe {
@@ -387,6 +431,22 @@ body {
   background-color: #ffffff;
 }
 
+.page-footer-description {
+  width: 475px;
+  margin: 0;
+  padding: 0 362px 46px 363px;
+}
+
+.subscribe-form {
+  padding: 0 200px 94px;
+}
+
+.footer-contacts {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .footer-title-second {
   color: #000000;
 }
@@ -396,5 +456,19 @@ body {
 }
 
 .footer-social-list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+  width: 130px;
+}
+
+.footer-contacts-phone {
+  width: 331px;
+  margin: 0 auto;
+}
+
+.footer-htmlacademy-link {
+  width: 115px;
+  margin-right: 72px;
+  margin-left: 52px;
 }
