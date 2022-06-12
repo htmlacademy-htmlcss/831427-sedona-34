@@ -284,18 +284,23 @@ body {
   background-image: url("../images/background/background-filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 35px 70px 70px;
+  margin: 0;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  margin: 0;
 }
 
 .breadcrumbs {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
 .breadcrumbs-link {
@@ -328,11 +333,29 @@ body {
   background-color: transparent;
 }
 
+.search-conteiner {
+  display: flex;
+  margin: 50px 71px 57px 73px;
+  padding: 0;
+}
+
 .search-results {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-right: 190px;
+  width: 338px;
+}
+
+.sorting-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  width: 160px;
 }
 
 /* Временный стиль для ссылок сортировки */
@@ -345,6 +368,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  width: 287px;
+  height: 48px;
 }
 
 .product-list {
@@ -399,6 +424,29 @@ body {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: uppercase;
+}
+
+.catalog-filter {
+  display: flex;
+  margin: 0;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
+}
+
+.filter-group-conteiner {
+  width: 514px;
+}
+
+.filter-group-conteiner {
+  display: flex;
+
+}
+
+.button-conteiner {
+  margin-left: auto;
+  width: 519px;
 }
 
 .pagination-item {
