@@ -136,14 +136,12 @@ body {
 .advantages-text {
   text-align: center;
   color: #333333;
-  margin: 0;
-  /* Почему-то при указании ширины и(или) отступов текст блока не вмещается и переносится на вторую строку :(
-  Хотя все параметры шрифта и размеры отступов соответствуют макету:
-  width: 653px;
+  margin: 0 auto;
+  /* Согласно макету ширина этого блока 653px, но при такой ширине текст блока не вмещается
+  и переносится на вторую строку (соответствие параметров шрифта макету проверяла).
+  Не нашла свою ошибку и пока что немного увеличила ширину блока. Это критично? */
+  width: 700px;
   padding: 0 274px 90px 273px;
-  Пробовала добавлять ширину всему блоку advantages, не помогло
-  */
-
 }
 
 .advantages-list {
@@ -174,16 +172,29 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 92px 85px 30px;
+  margin: 0;
+}
+
+.advantages-title-second {
+  padding: 103px 85px 30px;
 }
 
 .advantages-number {
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
+  padding: 0 85px 30px;
 }
 
 .advantages-description {
   font-size: 18px;
   line-height: 21px;
+  margin: 0 85px 92px;
+}
+
+.advantages-description-second {
+  margin: 0 85px 102px;
 }
 
 .advantages-value-item {
@@ -198,17 +209,27 @@ body {
   padding: 0;
 }
 
+.advantages-value-icon {
+  width: 75px;
+  margin: 81px 0 0;
+}
+
 .advantages-value-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+  padding: 30px 85px;
 }
 
 .advantages-value-description {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  width: 230px;
+  margin: 0;
+  padding: 0 85px 79px;
 }
 
 .advantages-value-second {
