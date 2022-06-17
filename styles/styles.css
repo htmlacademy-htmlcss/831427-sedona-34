@@ -18,6 +18,27 @@ html {
   height: 100%;
 }
 
+/* Почему-то скрывает картинку-текст на главной
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -40,13 +61,16 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+.container {
+  width: 1060px;
+}
+
 .page-header {
   color: #000000;
   background-color: #ffffff;
 }
 
 .button {
-  font-family: inherit;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -76,14 +100,20 @@ body {
 
 .navigation {
   display: flex;
-  width: 1200px;
+  /* При проверке дз 14.06. Роман дал рекомендацию убрать margin отсюда,
+  так как он наследуется от родительского контейнера. В видео видно, что при отключении margin
+  блок и правда остается в цетре. Но, когда я стала вносить все правки, ситуация поменялась и,
+  если убрать отсюда margin, то блок смещается влево. В чем я ошиблась?
+  */
   margin: 0 auto;
 }
 
 .navigation-logo {
   width: 139px;
+  /*
   margin-left: 70px;
   margin-right: 30px;
+  */
 }
 
 .navigation-list {
@@ -91,7 +121,6 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-
 }
 
 .navigation-user {
@@ -119,7 +148,9 @@ body {
 .page-main-image {
   display: block;
   margin: 0 auto;
+  /*
   padding: 51px 371px 82px;
+  */
 }
 
 .advantages-slogan {
@@ -129,24 +160,19 @@ body {
   text-align: center;
   text-transform: uppercase;
   width: 620px;
-  margin: 0;
-  padding: 69px 290px 25px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .advantages-text {
   text-align: center;
   color: #333333;
   margin: 0 auto;
-  /* Согласно макету ширина этого блока 653px, но при такой ширине текст блока не вмещается
-  и переносится на вторую строку (соответствие параметров шрифта макету проверяла).
-  Не нашла свою ошибку и пока что немного увеличила ширину блока. Это критично? */
-  width: 700px;
-  padding: 0 274px 90px 273px;
+  width: 654px;
 }
 
 .advantages-list {
   display: flex;
-  width: 1200px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -162,7 +188,6 @@ body {
 
 .advantages-item-container {
   display: flex;
-  width: 1200px;
   margin: 0;
   padding: 0;
 }
@@ -172,29 +197,39 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  /*
   padding: 92px 85px 30px;
+  */
   margin: 0;
 }
 
 .advantages-title-second {
+  /*
   padding: 103px 85px 30px;
+  */
 }
 
 .advantages-number {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
+  /*
   padding: 0 85px 30px;
+  */
 }
 
 .advantages-description {
   font-size: 18px;
   line-height: 21px;
+  /*
   margin: 0 85px 92px;
+  */
 }
 
 .advantages-description-second {
+  /*
   margin: 0 85px 102px;
+  */
 }
 
 .advantages-value-item {
@@ -204,14 +239,15 @@ body {
 .advantages-value-list {
   list-style-type: none;
   display: flex;
-  width: 1200px;
   margin: 0;
   padding: 0;
 }
 
 .advantages-value-icon {
   width: 75px;
+  /*
   margin: 81px 0 0;
+  */
 }
 
 .advantages-value-title {
@@ -220,7 +256,9 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+  /*
   padding: 30px 85px;
+  */
 }
 
 .advantages-value-description {
@@ -229,7 +267,9 @@ body {
   color: #333333;
   width: 230px;
   margin: 0;
+  /*
   padding: 0 85px 79px;
+  */
 }
 
 .advantages-value-second {
@@ -242,6 +282,7 @@ body {
 
 .search-hotel {
   text-align: center;
+  margin: 0 auto;
 }
 
 .search-hotel-title {
@@ -250,20 +291,26 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+  /*
   padding: 91px 452px 29px 451px;
+  */
 }
 
 .search-hotel-description {
   color: #333333;
   margin: 0;
+  /*
   padding: 0 304px 55px;
+  */
 }
 
 .search-hotel-link {
   display: block;
   width: 574px;
+  /*
   margin: 0 313px 93px;
   padding: 12px 15px;
+  */
   font-size: 20px;
   line-height: 36px;
   color: #ffffff;
@@ -271,12 +318,15 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
 }
 
 .footer-subscribe {
   text-align: center;
-  width: 1200px;
+  margin: 0 auto;
+  /*
   height: 411px;
+  */
 }
 
 .subscribe-first {
@@ -293,8 +343,10 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   width: 404px;
-  margin: 0;
+  margin: 0 auto;
+  /*
   padding: 94px 398px 29px;
+  */
 }
 
 .button-subscribe {
@@ -316,8 +368,14 @@ body {
   background-image: url("../images/background/background-filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  /*
   padding: 35px 70px 70px;
+  */
   margin: 0;
+}
+
+.inner-header {
+  margin: 0 auto;
 }
 
 .inner-header-title {
@@ -332,13 +390,19 @@ body {
   line-height: 21px;
   color: #ffffff;
   margin: 0;
+  /*
   padding-bottom: 40px;
+  */
 }
 
 .breadcrumbs-link {
   font-weight: 400;
   color: inherit;
   text-decoration: none;
+}
+
+.main-filter {
+  margin: 0 auto;
 }
 
 .catalog-filter-title {
@@ -365,9 +429,11 @@ body {
   background-color: transparent;
 }
 
-.search-conteiner {
+.search-container {
   display: flex;
+  /*
   margin: 50px 71px 57px 73px;
+  */
   padding: 0;
 }
 
@@ -404,6 +470,10 @@ body {
   height: 48px;
 }
 
+.catalog-products {
+  margin: 0 auto;
+}
+
 .product-list {
   list-style-type: none;
   /* Пока скрыла, так как в этом д/з нужна была только сетка крупных блоков
@@ -411,7 +481,6 @@ body {
   margin: 0;
   padding: 0;
   */
-  width: 1056px;
 }
 
 .product-card-link {
@@ -489,7 +558,6 @@ body {
 
 .pagination-container {
   display: flex;
-  width: 1056px;
   margin: 0;
   padding: 0;
 }
@@ -532,7 +600,9 @@ body {
 
 .select-control-second {
   width: 160px;
+  /*
   padding: 14px 43px 13px 19px;
+  */
 }
 
 .number-hotels {
@@ -550,17 +620,20 @@ body {
 
 .page-footer-description {
   width: 475px;
-  margin: 0;
+  margin: 0 auto;
+  /*
   padding: 0 362px 46px 363px;
+  */
 }
 
 .subscribe-form {
+  /*
   padding: 0 200px 94px;
+  */
 }
 
 .footer-contacts {
   display: flex;
-  width: 1200px;
   margin: 0 auto;
 }
 

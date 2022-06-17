@@ -10,7 +10,7 @@
   <body>
     <div class="body-container">
       <header class="page-header">
-        <nav class="navigation">
+        <nav class="container navigation">
           <a class="navigation-logo" href="index.html">
             <img class="page-header-logo" alt="Логотип сайта города Седона." src="images/logo/logo-sedona.svg"
               width="139" height="70">
@@ -41,7 +41,7 @@
       </header>
       <main class="main-container main-inner">
         <div class="main-inner-container">
-          <header class="inner-header">
+          <header class="container inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ol class="breadcrumbs">
               <li class="breadcrumbs-item">
@@ -52,9 +52,8 @@
               </li>
             </ol>
           </header>
-          <section class="main-filter">
-            <!-- Временный hidden у заголовка -->
-            <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
+          <section class="container main-filter">
+            <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <div class="filter-group-conteiner">
                 <fieldset class="catalog-filter-group">
@@ -113,8 +112,8 @@
             </form>
           </section>
         </div>
-        <section class="catalog-products">
-          <div class="search-conteiner">
+        <section class="container catalog-products">
+          <div class="search-container">
             <p class="search-results">Найдено гостиниц: 38</p>
             <select class="select-control" name="sorting" aria-label="Сортировка">
               <option value="cheap">Сначала дешёвые</option>
@@ -230,7 +229,7 @@
         </section>
       </main>
       <footer class="page-footer">
-        <section class="footer-subscribe subscribe-second">
+        <section class="container footer-subscribe subscribe-second">
           <h2 class="page-footer-title footer-title-second">Подпишитесь на рассылку</h2>
           <p class="page-footer-description footer-description-second">Только полезная информация и никакого спама,
             честное бойскаутское!</p>
@@ -239,7 +238,7 @@
             <button class="button button-subscribe" type="submit">Подписаться</button>
           </form>
         </section>
-        <section class="footer-contacts">
+        <section class="container footer-contacts">
           <h2 class="visually-hidden" hidden>Контакты</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
