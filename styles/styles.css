@@ -348,6 +348,7 @@ body {
 
 .button-subscribe {
   background-color: #82B3D3;
+  padding: 12px 15px;
 }
 
 .footer-contacts-phone {
@@ -367,10 +368,8 @@ body {
   background-image: url("../images/background/background-filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /*
-  padding: 35px 70px 70px;
-  */
   margin: 0;
+  padding: 35px 70px 70px;
 }
 
 .inner-header {
@@ -382,22 +381,24 @@ body {
   line-height: 78px;
   font-weight: 700;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .breadcrumbs {
+  display: flex;
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
   margin: 0;
-  /*
-  padding-bottom: 40px;
-  */
+  margin-bottom: 40px;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
   font-weight: 400;
   color: inherit;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 .main-filter {
@@ -430,9 +431,7 @@ body {
 
 .search-container {
   display: flex;
-  /*
-  margin: 50px 71px 57px 73px;
-  */
+  align-items: center;
   padding: 0;
 }
 
@@ -471,6 +470,7 @@ body {
 
 .catalog-products {
   margin: 0 auto;
+  padding: 50px 0 56px;
 }
 
 .product-list {
@@ -621,10 +621,6 @@ body {
   width: 475px;
   margin: 0 auto;
   margin-bottom: 46px;
-}
-
-.subscribe-form {
-  padding: 12px 15px;
 }
 
 .footer-contacts {
