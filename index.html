@@ -10,7 +10,7 @@
   <body>
     <div class="body-container">
       <header class="page-header">
-        <nav class="navigation">
+        <nav class="container navigation">
           <a class="navigation-logo" href="index.html">
             <img class="page-header-logo" alt="Логотип сайта города Седона." src="images/logo/logo-sedona.svg"
               width="139" height="70">
@@ -41,16 +41,17 @@
       </header>
       <main class="main-container page-main">
         <div class="page-main-container">
-          <!-- Временный hidden у заголовка -->
-          <h1 class="visually-hidden" hidden>Город Седона</h1>
+          <h1 class="visually-hidden">Город Седона</h1>
           <img class="page-main-image" alt="Welcome to the gorgeous Sedona." src="images/icon/icon-welcome.svg"
             width="458" height="352">
         </div>
         <section class="advantages">
-          <!-- Временный hidden у заголовка -->
-          <h2 class="visually-hidden" hidden>Преимущества города Седона</h2>
-          <p class="advantages-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="advantages-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+          <!-- Нужно ли было делать и здесь ширину 1060 (в частности у блоков жилье, еда и сувениры)? -->
+          <div class="advantages-container">
+            <h2 class="visually-hidden">Преимущества города Седона</h2>
+            <p class="advantages-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+            <p class="advantages-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
           <ol class="advantages-list">
             <li class="advantages-item">
               <div class="advantages-item-container">
@@ -59,32 +60,29 @@
                   <p class="advantages-number">№1</p>
                   <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
-                <!-- Здесь добавила изображение как контентое, чтобы выставить все блоки.
-              Но на ретро говорили, что именно это фото - декоративное. Видимо, позже придется поправить --->
                 <img class="advantages-image" alt="Город Седона." src="images/photo/photo-sedona.jpg" width="800"
                   height="384">
               </div>
               <ul class="advantages-value-list">
-                <li class="advantages-value-item advantages-value-second">
+                <li class="advantages-value-item advantages-container-second advantages-value-second">
                   <!-- Добавила временные alt у иконок списка.
-                    Высота этих трех блоков не соответствует макету, так как не добавлены иконки -->
+                    Высота этих трех блоков не соответствует макету, буду все сверять после добавления иконок.
+                  Текст внутри advantages-value-description пока тоже не стала ровнять по строчкам -->
                   <img class="advantages-value-icon" alt="Иконка Жилье" src="">
                   <h4 class="advantages-value-title">Жилье</h4>
-                  <!-- В этом пункте текст переносится не так, как в макете. Пока не нашла причину.
-                Второй br ставить не стала, так как по кодгайду нельзя, по-моему -->
-                  <p class="advantages-value-description">Рекомендуем пожить <br>в настоящем мотеле, всё как в кино!</p>
+                  <p class="advantages-value-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
-                <li class="advantages-value-item">
+                <li class="advantages-value-item advantages-container-second">
                   <img class="advantages-value-icon" alt="Иконка Еда" src="">
                   <h4 class="advantages-value-title">Еда</h4>
-                  <p class="advantages-value-description">Всегда заказывайте <br>топовый фирменный бургер, вы не
+                  <p class="advantages-value-description">Всегда заказывайте топовый фирменный бургер, вы не
                     разочаруетесь!</p>
                 </li>
-                <li class="advantages-value-item advantages-value-second">
+                <li class="advantages-value-item advantages-container-second advantages-value-second">
                   <img class="advantages-value-icon" alt="Иконка Сувениры" src="">
                   <h4 class="advantages-value-title">Сувениры</h4>
-                  <p class="advantages-value-description">Не только китайского, <br>но и настоящего местного
-                    производства!</p>
+                  <p class="advantages-value-description">Не только китайского, но и настоящего местного производства!
+                  </p>
                 </li>
               </ul>
             </li>
@@ -100,47 +98,48 @@
               </div>
             </li>
             <ul class="advantages-value-list">
-              <li class="advantages-value-item advantages-value-second">
-                <h3 class="advantages-title advantages-title-second">Небольшая площадь</h3>
+              <li class="advantages-value-item advantages-container-third advantages-value-second">
+                <h3 class="advantages-title">Небольшая площадь</h3>
                 <p class="advantages-number">№3</p>
-                <p class="advantages-description advantages-description-second">Все достопримечательности находятся
+                <p class="advantages-description">Все достопримечательности находятся
                   очень близко</p>
               </li>
-              <li class="advantages-value-item advantages-value-third">
-                <h3 class="advantages-title advantages-title-second">Красивая <br>дорога</h3>
+              <li class="advantages-value-item advantages-container-third advantages-value-third">
+                <h3 class="advantages-title">Красивая <br>дорога</h3>
                 <p class="advantages-number">№4</p>
-                <p class="advantages-description advantages-description-second">Ехать в Седону из Лас-Вегаса совсем не
+                <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не
                   скучно!</p>
               </li>
-              <li class="advantages-value-item advantages-value-second">
-                <h3 class="advantages-title advantages-title-second">Мало <br>туристов</h3>
+              <li class="advantages-value-item advantages-container-third advantages-value-second">
+                <h3 class="advantages-title">Мало <br>туристов</h3>
                 <p class="advantages-number">№5</p>
-                <p class="advantages-description advantages-description-second">Большинство едет в Гранд Каньон и
+                <p class="advantages-description">Большинство едет в Гранд Каньон и
                   толпится там</p>
               </li>
             </ul>
           </ol>
         </section>
-        <section class="search-hotel">
+        <section class="container search-hotel">
           <h2 class="search-hotel-title">Заинтересовались?</h2>
-          <p class="search-hotel-description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие
+          <p class="search-hotel-description">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие
             предложения
             гостиниц в Седоне</p>
           <a class="search-hotel-link" href="#">Поиск гостиницы в Седоне</a>
         </section>
       </main>
       <footer class="page-footer">
-        <section class="footer-subscribe subscribe-first">
-          <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
-          <p class="page-footer-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="field" placeholder="Ваш e-mail" type="email" required>
-            <button class="button button-subscribe" type="submit">Подписаться</button>
-          </form>
+        <section class="subscribe-first">
+          <div class="container footer-subscribe">
+            <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
+            <p class="page-footer-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+              <input class="field" placeholder="Ваш e-mail" type="email" required>
+              <button class="button button-subscribe" type="submit">Подписаться</button>
+            </form>
+          </div>
         </section>
-        <section class="footer-contacts">
-          <!-- Временный hidden у заголовка -->
-          <h2 class="visually-hidden" hidden>Контакты</h2>
+        <section class="container footer-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="footer-social-button" href="https://vk.com/htmlacademy">
