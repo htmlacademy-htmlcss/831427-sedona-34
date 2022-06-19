@@ -145,21 +145,25 @@ body {
   width: 160px;
 }
 
-
 .page-main-container {
   background-image: url("../images/background/background-index.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #000000;
   background-color: #ffffff;
+  padding: 51px 0 82px 0;
+  /* После добавления декоративного элемента поправить нижний паддинг
+  padding: 51px 0 25px 0;
+  */
 }
 
 .page-main-image {
   display: block;
   margin: 0 auto;
-  /*
-  padding: 51px 371px 82px;
-  */
+}
+
+.advantages-container {
+  padding: 63px 0 90px 0;
 }
 
 .advantages-slogan {
@@ -170,6 +174,7 @@ body {
   text-transform: uppercase;
   width: 620px;
   margin: 0 auto;
+  margin-bottom: 31px;
   padding: 0;
 }
 
@@ -193,6 +198,8 @@ body {
   color: #FFFFFF;
   background-color: #82B3D3;
   width: 400px;
+  margin: 0 auto;
+  padding: 92px 85px;
 }
 
 .advantages-item-container {
@@ -206,10 +213,8 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  /*
-  padding: 92px 85px 30px;
-  */
-  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .advantages-title-second {
@@ -222,23 +227,29 @@ body {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
-  /*
-  padding: 0 85px 30px;
-  */
+  margin-bottom: 30px;
 }
 
 .advantages-description {
   font-size: 18px;
   line-height: 21px;
-  /*
-  margin: 0 85px 92px;
-  */
+  margin: 0 auto;
 }
 
 .advantages-description-second {
   /*
   margin: 0 85px 102px;
   */
+}
+
+.advantages-container-second {
+  margin: 0 auto;
+  padding: 80px 85px 81px;
+}
+
+.advantages-container-third {
+  margin: 0 auto;
+  padding: 103px 85px 102px;
 }
 
 .advantages-value-item {
@@ -254,9 +265,6 @@ body {
 
 .advantages-value-icon {
   width: 75px;
-  /*
-  margin: 81px 0 0;
-  */
 }
 
 .advantages-value-title {
@@ -264,10 +272,7 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
-  /*
-  padding: 30px 85px;
-  */
+  margin: 30px auto;
 }
 
 .advantages-value-description {
@@ -292,34 +297,29 @@ body {
 .search-hotel {
   text-align: center;
   margin: 0 auto;
+  padding: 91px 0 93px 0;
 }
 
 .search-hotel-title {
+  width: 297px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
-  /*
-  padding: 91px 452px 29px 451px;
-  */
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .search-hotel-description {
+  width: 592px;
   color: #333333;
-  margin: 0;
-  /*
-  padding: 0 304px 55px;
-  */
+  margin: 0 auto;
+  margin-bottom: 55px;
 }
 
 .search-hotel-link {
   display: block;
   width: 574px;
-  /*
-  margin: 0 313px 93px;
-  padding: 12px 15px;
-  */
   font-size: 20px;
   line-height: 36px;
   color: #ffffff;
@@ -327,15 +327,20 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
   margin: 0 auto;
+  padding: 12px 15px;
 }
 
 .footer-subscribe {
   text-align: center;
   margin: 0 auto;
+  padding: 94px 0;
   /*
-  height: 411px;
+  Высота блока не соответствует макету. Видимо, из-за того, что с формой еще не работали?
+  Пока указала высоту
   */
+  height: 411px;
 }
 
 .subscribe-first {
@@ -353,9 +358,7 @@ body {
   text-transform: uppercase;
   width: 404px;
   margin: 0 auto;
-  /*
-  padding: 94px 398px 29px;
-  */
+  margin-bottom: 29px;
 }
 
 .button-subscribe {
@@ -630,15 +633,11 @@ body {
 .page-footer-description {
   width: 475px;
   margin: 0 auto;
-  /*
-  padding: 0 362px 46px 363px;
-  */
+  margin-bottom: 46px;
 }
 
 .subscribe-form {
-  /*
-  padding: 0 200px 94px;
-  */
+  padding: 12px 15px;
 }
 
 .footer-contacts {
