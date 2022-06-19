@@ -217,12 +217,6 @@ body {
   margin-bottom: 30px;
 }
 
-.advantages-title-second {
-  /*
-  padding: 103px 85px 30px;
-  */
-}
-
 .advantages-number {
   font-size: 18px;
   line-height: 21px;
@@ -234,12 +228,6 @@ body {
   font-size: 18px;
   line-height: 21px;
   margin: 0 auto;
-}
-
-.advantages-description-second {
-  /*
-  margin: 0 85px 102px;
-  */
 }
 
 .advantages-container-second {
@@ -281,9 +269,6 @@ body {
   color: #333333;
   width: 230px;
   margin: 0 auto;
-  /*
-  padding: 0 85px 79px;
-  */
 }
 
 .advantages-value-second {
@@ -373,6 +358,8 @@ body {
   color: #000000;
   text-transform: uppercase;
 }
+
+/* Отсюда начать проверять отступы в каталоге */
 
 .main-inner-container {
   color: #ffffff;
@@ -643,6 +630,7 @@ body {
 .footer-contacts {
   display: flex;
   margin: 0 auto;
+  padding: 40px 0 30px;
 }
 
 .footer-title-second {
@@ -654,10 +642,19 @@ body {
 }
 
 .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 130px;
+  width: 150px;
+}
+
+.footer-social-item {
+  width: 48px;
+  height: 40px;
+  padding: 0 10px;
+  margin-bottom: 5px;
 }
 
 .footer-contacts-phone {
@@ -667,6 +664,5 @@ body {
 
 .footer-htmlacademy-link {
   width: 115px;
-  margin-right: 72px;
-  margin-left: 52px;
+  margin-left: auto;
 }
