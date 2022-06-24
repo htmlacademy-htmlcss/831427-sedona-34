@@ -57,8 +57,21 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+/* container отделила, прошу проверить, все ли ок сделала */
+
 .container {
   width: 1060px;
+  margin: 0 auto;
+}
+
+.container-navigation {
+  display: flex;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page-header {
@@ -76,8 +89,6 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-
-/* Pages */
 
 .navigation-link {
   display: block;
@@ -98,12 +109,6 @@ body {
 
 .navigation {
   display: flex;
-  /* При проверке дз 14.06. Роман дал рекомендацию убрать margin отсюда,
-  так как он наследуется от родительского контейнера. В видео видно, что при отключении margin
-  блок и правда остается в цетре. Но, когда я стала вносить все правки, ситуация поменялась и,
-  если убрать отсюда margin, то блок смещается влево. В чем я ошиблась?
-  */
-  margin: 0 auto;
 }
 
 .navigation-logo {
@@ -126,12 +131,10 @@ body {
   margin-left: auto;
 }
 
-
 .navigation-user .navigation-link {
   min-width: 19px;
   min-height: 19px;
 }
-
 
 .navigation-link-want {
   font-size: 16px;
@@ -151,9 +154,9 @@ body {
   background-repeat: no-repeat;
   color: #000000;
   background-color: #ffffff;
-  padding: 51px 0 82px 0;
+  padding: 51px 0 82px;
   /* После добавления декоративного элемента поправить нижний паддинг
-  padding: 51px 0 25px 0;
+  padding: 51px 0 25px;
   */
 }
 
@@ -163,7 +166,7 @@ body {
 }
 
 .advantages-container {
-  padding: 63px 0 90px 0;
+  padding: 63px 0 90px;
 }
 
 .advantages-slogan {
@@ -173,8 +176,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   width: 620px;
-  margin: 0 auto;
-  margin-bottom: 31px;
+  margin: 0 auto 31px;
   padding: 0;
 }
 
@@ -187,11 +189,11 @@ body {
 
 .advantages-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   text-align: center;
   list-style-type: none;
-  flex-wrap: wrap;
 }
 
 .advantages-text-item {
@@ -213,15 +215,13 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
 }
 
 .advantages-number {
   font-size: 18px;
   line-height: 21px;
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
 }
 
 .advantages-description {
@@ -235,13 +235,10 @@ body {
   padding: 80px 85px 81px;
 }
 
-.advantages-container-third {
-  margin: 0 auto;
-  padding: 103px 85px 102px;
-}
-
 .advantages-value-item {
   width: 400px;
+  margin: 0 auto;
+  padding: 103px 85px 102px;
 }
 
 .advantages-value-list {
@@ -280,26 +277,23 @@ body {
 }
 
 .search-hotel {
+  width: 800px;
   text-align: center;
   margin: 0 auto;
-  padding: 91px 0 93px 0;
+  padding: 91px 0 93px;
 }
 
 .search-hotel-title {
-  width: 297px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 }
 
 .search-hotel-description {
-  width: 592px;
   color: #333333;
-  margin: 0 auto;
-  margin-bottom: 55px;
+  margin: 0 0 55px;
 }
 
 .search-hotel-link {
@@ -318,21 +312,17 @@ body {
 }
 
 .footer-subscribe {
+  width: 800px;
   text-align: center;
   margin: 0 auto;
   padding: 94px 0;
-  /*
-  Высота блока не соответствует макету. Видимо, из-за того, что с формой еще не работали?
-  Пока указала высоту
-  */
-  height: 411px;
 }
 
 .subscribe-first {
   color: #ffffff;
   background-color: #000000;
   background-image: url("../images/background/background-subscribe.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -341,13 +331,12 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  width: 404px;
-  margin: 0 auto;
-  margin-bottom: 29px;
+  margin: 0 0 29px;
 }
 
 .button-subscribe {
   background-color: #82B3D3;
+  padding: 12px 15px;
 }
 
 .footer-contacts-phone {
@@ -357,9 +346,8 @@ body {
   text-align: center;
   color: #000000;
   text-transform: uppercase;
+  text-decoration: none;
 }
-
-/* Отсюда начать проверять отступы в каталоге */
 
 .main-inner-container {
   color: #ffffff;
@@ -367,41 +355,31 @@ body {
   background-image: url("../images/background/background-filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /*
-  padding: 35px 70px 70px;
-  */
   margin: 0;
-}
-
-.inner-header {
-  margin: 0 auto;
+  padding: 35px 70px 70px;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 10px;
 }
 
 .breadcrumbs {
+  display: flex;
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
-  margin: 0;
-  /*
-  padding-bottom: 40px;
-  */
+  margin: 0 0 40px;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
   font-weight: 400;
   color: inherit;
   text-decoration: none;
-}
-
-.main-filter {
-  margin: 0 auto;
+  margin-right: 10px;
 }
 
 .catalog-filter-title {
@@ -430,10 +408,8 @@ body {
 
 .search-container {
   display: flex;
-  /*
-  margin: 50px 71px 57px 73px;
-  */
-  padding: 0;
+  align-items: center;
+  padding: 50px 0 56px;
 }
 
 .search-results {
@@ -442,8 +418,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   padding: 0;
-  margin: 0;
-  margin-right: 190px;
+  margin: 0 190px 0 0;
   width: 338px;
 }
 
@@ -452,7 +427,13 @@ body {
   padding: 0;
   margin: 0;
   margin-left: auto;
+  /* Объединить мэрджин. Не стала менять, так как пока сами элементы скрыты */
   width: 160px;
+}
+
+.search-container .button {
+  width: 48px;
+  height: 48px;
 }
 
 /* Временный стиль для ссылок сортировки */
@@ -469,17 +450,13 @@ body {
   height: 48px;
 }
 
-.catalog-products {
-  margin: 0 auto;
-}
-
 .product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
   list-style-type: none;
-  /* Пока скрыла, так как в этом д/з нужна была только сетка крупных блоков
-  display: flex;
   margin: 0;
   padding: 0;
-  */
 }
 
 .product-card-link {
@@ -491,15 +468,36 @@ body {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  margin: 0;
 }
 
 .product-card-price {
+  display: grid;
+  grid-template-columns: 150px 150px;
+
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  margin: 0;
+}
+
+.product-card-price dt {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.product-card-price dd {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  /* Здесь совсем не уверена в правильности добавления паддинга, но только так смогла отодвинуть текст*/
+  padding-left: 10px;
+  margin: 0;
 }
 
 .product-card-button {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  justify-self: start;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
@@ -507,9 +505,16 @@ body {
   text-transform: uppercase;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-decoration: none;
+  border-radius: 4px;
+  padding: 9px 15px 8px;
+  width: 140px;
 }
 
+/* Шрифт не унаследовался */
 .button-favorites {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  justify-self: end;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -517,19 +522,60 @@ body {
   color: #FFFFFF;
   background-color: #82B3D3;
   text-transform: uppercase;
+  border-radius: 4px;
+  padding: 9px 15px 8px;
+  border: none;
+  font-family: inherit;
+  width: 140px;
 }
 
 .button-favorites-choose {
   background-color: #7DB54F;
 }
 
+.product-card {
+  display: grid;
+  row-gap: 16px;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 211px 28px 21px 37px 37px;
+  padding: 20px;
+}
+
+.product-card-image {
+  object-fit: contain;
+}
+
+.product-card-image-link {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.product-card-title-link {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.product-card-star-link {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  justify-self: start;
+  margin: 0;
+}
+
 .product-card-score {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  justify-self: end;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #333333;
   background-color: #F2F2F2;
+  border-radius: 4px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 9px 22px 8px 23px;
+  width: 140px;
 }
 
 .catalog-filter {
@@ -547,7 +593,6 @@ body {
 
 .filter-group-conteiner {
   display: flex;
-
 }
 
 .button-conteiner {
@@ -558,7 +603,8 @@ body {
 .pagination-container {
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 30px 0 25px;
+  align-items: center;
 }
 
 .pagination {
@@ -576,12 +622,22 @@ body {
   color: #FFFFFF;
   text-transform: uppercase;
   width: 55px;
+  background-color: #82B3D3;
+  list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .pagination-link {
+  display: block;
   color: inherit;
-  background-color: #82B3D3;
   text-decoration: none;
+  width: 60px;
+  height: 60px;
+  /* Как отцентровать цифры внутри пагинации? Там разные паддинги и не целые */
+  padding: 12px 15px;
 }
 
 .pagination-current {
@@ -592,16 +648,14 @@ body {
 .number-hotels-container {
   display: flex;
   width: 386px;
-  margin: 0;
   margin-left: auto;
   padding: 0;
+  align-items: center;
 }
 
 .select-control-second {
   width: 160px;
-  /*
   padding: 14px 43px 13px 19px;
-  */
 }
 
 .number-hotels {
@@ -609,7 +663,7 @@ body {
   line-height: 21px;
   color: #333333;
   width: 175px;
-  margin: 0;
+  margin: 0 51px 0 0;
   padding: 0;
 }
 
@@ -618,18 +672,11 @@ body {
 }
 
 .page-footer-description {
-  width: 475px;
-  margin: 0 auto;
   margin-bottom: 46px;
-}
-
-.subscribe-form {
-  padding: 12px 15px;
 }
 
 .footer-contacts {
   display: flex;
-  margin: 0 auto;
   padding: 40px 0 30px;
 }
 
@@ -657,12 +704,6 @@ body {
   margin-bottom: 5px;
 }
 
-.footer-contacts-phone {
-  width: 331px;
-  margin: 0 auto;
-}
-
 .footer-htmlacademy-link {
   width: 115px;
-  margin-left: auto;
 }
