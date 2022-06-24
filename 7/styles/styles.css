@@ -1,0 +1,709 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* container отделила, прошу проверить, все ли ок сделала */
+
+.container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.container-navigation {
+  display: flex;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.button {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navigation-link {
+  display: block;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 20px 17px;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation-logo {
+  width: 139px;
+  margin-right: 30px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 450px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation-user {
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 19px;
+  min-height: 19px;
+}
+
+.navigation-link-want {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #756157;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 9px 15px;
+  width: 160px;
+}
+
+.page-main-container {
+  background-image: url("../images/background/background-index.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 51px 0 82px;
+  /* После добавления декоративного элемента поправить нижний паддинг
+  padding: 51px 0 25px;
+  */
+}
+
+.page-main-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.advantages-container {
+  padding: 63px 0 90px;
+}
+
+.advantages-slogan {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  width: 620px;
+  margin: 0 auto 31px;
+  padding: 0;
+}
+
+.advantages-text {
+  text-align: center;
+  color: #333333;
+  margin: 0 auto;
+  width: 654px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+.advantages-text-item {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  width: 400px;
+  margin: 0 auto;
+  padding: 92px 85px;
+}
+
+.advantages-item-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto 30px;
+}
+
+.advantages-number {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 auto 30px;
+}
+
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 auto;
+}
+
+.advantages-container-second {
+  margin: 0 auto;
+  padding: 80px 85px 81px;
+}
+
+.advantages-value-item {
+  width: 400px;
+  margin: 0 auto;
+  padding: 103px 85px 102px;
+}
+
+.advantages-value-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-value-icon {
+  width: 75px;
+}
+
+.advantages-value-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 30px auto;
+}
+
+.advantages-value-description {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  width: 230px;
+  margin: 0 auto;
+}
+
+.advantages-value-second {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-value-third {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.search-hotel {
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 91px 0 93px;
+}
+
+.search-hotel-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+}
+
+.search-hotel-description {
+  color: #333333;
+  margin: 0 0 55px;
+}
+
+.search-hotel-link {
+  display: block;
+  width: 574px;
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 12px 15px;
+}
+
+.footer-subscribe {
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 94px 0;
+}
+
+.subscribe-first {
+  color: #ffffff;
+  background-color: #000000;
+  background-image: url("../images/background/background-subscribe.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-footer-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 29px;
+}
+
+.button-subscribe {
+  background-color: #82B3D3;
+  padding: 12px 15px;
+}
+
+.footer-contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.main-inner-container {
+  color: #ffffff;
+  background-color: #000000;
+  background-image: url("../images/background/background-filter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 35px 70px 70px;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.breadcrumbs {
+  display: flex;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  margin: 0 0 40px;
+  list-style-type: none;
+}
+
+.breadcrumbs-link {
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.control {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button-apply {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82B3D3;
+}
+
+.button-reset {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+  background-color: transparent;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 50px 0 56px;
+}
+
+.search-results {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 190px 0 0;
+  width: 338px;
+}
+
+.sorting-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  /* Объединить мэрджин. Не стала менять, так как пока сами элементы скрыты */
+  width: 160px;
+}
+
+.search-container .button {
+  width: 48px;
+  height: 48px;
+}
+
+/* Временный стиль для ссылок сортировки */
+
+.sorting-item a {
+  color: #000000;
+}
+
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  width: 287px;
+  height: 48px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product-card-price {
+  display: grid;
+  grid-template-columns: 150px 150px;
+
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0;
+}
+
+.product-card-price dt {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.product-card-price dd {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  /* Здесь совсем не уверена в правильности добавления паддинга, но только так смогла отодвинуть текст*/
+  padding-left: 10px;
+  margin: 0;
+}
+
+.product-card-button {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  justify-self: start;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #756157;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 9px 15px 8px;
+  width: 140px;
+}
+
+/* Шрифт не унаследовался */
+.button-favorites {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  justify-self: end;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 9px 15px 8px;
+  border: none;
+  font-family: inherit;
+  width: 140px;
+}
+
+.button-favorites-choose {
+  background-color: #7DB54F;
+}
+
+.product-card {
+  display: grid;
+  row-gap: 16px;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 211px 28px 21px 37px 37px;
+  padding: 20px;
+}
+
+.product-card-image {
+  object-fit: contain;
+}
+
+.product-card-image-link {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.product-card-title-link {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.product-card-star-link {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  justify-self: start;
+  margin: 0;
+}
+
+.product-card-score {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  justify-self: end;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #333333;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 9px 22px 8px 23px;
+  width: 140px;
+}
+
+.catalog-filter {
+  display: flex;
+  margin: 0;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
+}
+
+.filter-group-conteiner {
+  width: 514px;
+}
+
+.filter-group-conteiner {
+  display: flex;
+}
+
+.button-conteiner {
+  margin-left: auto;
+  width: 519px;
+}
+
+.pagination-container {
+  display: flex;
+  margin: 0;
+  padding: 30px 0 25px;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  width: 370px;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-item {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 55px;
+  background-color: #82B3D3;
+  list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  /* Как отцентровать цифры внутри пагинации? Там разные паддинги и не целые */
+  padding: 12px 15px;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.number-hotels-container {
+  display: flex;
+  width: 386px;
+  margin-left: auto;
+  padding: 0;
+  align-items: center;
+}
+
+.select-control-second {
+  width: 160px;
+  padding: 14px 43px 13px 19px;
+}
+
+.number-hotels {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  width: 175px;
+  margin: 0 51px 0 0;
+  padding: 0;
+}
+
+.subscribe-second {
+  background-color: #ffffff;
+}
+
+.page-footer-description {
+  margin-bottom: 46px;
+}
+
+.footer-contacts {
+  display: flex;
+  padding: 40px 0 30px;
+}
+
+.footer-title-second {
+  color: #000000;
+}
+
+.footer-description-second {
+  color: #333333;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 150px;
+}
+
+.footer-social-item {
+  width: 48px;
+  height: 40px;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+.footer-htmlacademy-link {
+  width: 115px;
+}
