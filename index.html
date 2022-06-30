@@ -65,24 +65,18 @@
                   height="384">
               </div>
               <ul class="advantages-value-list">
-                <li class="advantages-value-item advantages-container-second advantages-value-second">
-                  <!-- Добавила временные alt у иконок списка.
-                    Высота этих трех блоков не соответствует макету, буду все сверять после добавления иконок.
-                  Текст внутри advantages-value-description пока тоже не стала ровнять по строчкам -->
-                  <img class="advantages-value-icon" alt="Иконка Жилье" src="">
-                  <h4 class="advantages-value-title">Жилье</h4>
-                  <p class="advantages-value-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <li class="advantages-value-item advantages-container-first advantages-value-second">
+                    <h4 class="advantages-value-title advantages-icon-home">Жильё</h4>
+                    <p class="advantages-value-description">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>
                 </li>
-                <li class="advantages-value-item advantages-container-second">
-                  <img class="advantages-value-icon" alt="Иконка Еда" src="">
-                  <h4 class="advantages-value-title">Еда</h4>
-                  <p class="advantages-value-description">Всегда заказывайте топовый фирменный бургер, вы не
+                <li class="advantages-value-item advantages-container-first">
+                  <h4 class="advantages-value-title advantages-icon-food">Еда</h4>
+                  <p class="advantages-value-description">Всегда заказывайте <br>топовый фирменный бургер, вы не
                     разочаруетесь!</p>
                 </li>
-                <li class="advantages-value-item advantages-container-second advantages-value-second">
-                  <img class="advantages-value-icon" alt="Иконка Сувениры" src="">
-                  <h4 class="advantages-value-title">Сувениры</h4>
-                  <p class="advantages-value-description">Не только китайского, но и настоящего местного производства!
+                <li class="advantages-value-item advantages-container-first advantages-value-second">
+                  <h4 class="advantages-value-title advantages-icon-souvenir">Сувениры</h4>
+                  <p class="advantages-value-description">Не только китайского, <br>но и настоящего местного производства!
                   </p>
                 </li>
               </ul>
@@ -98,19 +92,19 @@
                 </div>
               </div>
             </li>
-            <li class="advantages-value-item advantages-value-second">
+            <li class="advantages-value-item advantages-container-second advantages-value-second">
               <h3 class="advantages-title">Небольшая площадь</h3>
               <p class="advantages-number">№3</p>
               <p class="advantages-description">Все достопримечательности находятся
                 очень близко</p>
             </li>
-            <li class="advantages-value-item advantages-value-third">
+            <li class="advantages-value-item advantages-container-second advantages-value-third">
               <h3 class="advantages-title">Красивая <br>дорога</h3>
               <p class="advantages-number">№4</p>
               <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не
                 скучно!</p>
             </li>
-            <li class="advantages-value-item advantages-value-second">
+            <li class="advantages-value-item advantages-container-second advantages-value-second">
               <h3 class="advantages-title">Мало <br>туристов</h3>
               <p class="advantages-number">№5</p>
               <p class="advantages-description">Большинство едет в Гранд Каньон и
@@ -146,16 +140,34 @@
             <ul class="footer-social-list">
               <li class="footer-social-item">
                 <a class="footer-social-button" href="https://vk.com/htmlacademy">
+                  <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="24" height="14"
+                    viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M23.45.948c.166-.546 0-.948-.795-.948H20.03c-.668 0-.976.347-1.143.73 0 0-1.335 3.196-3.226 5.272-.612.602-.89.793-1.224.793-.167 0-.418-.191-.418-.738V.948c0-.656-.184-.948-.74-.948H9.151c-.417 0-.668.304-.668.593 0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984-.89 0-3.055-3.211-4.34-6.885C4.45.288 4.198 0 3.527 0H.9C.15 0 0 .347 0 .73c0 .682.89 4.07 4.145 8.551C6.315 12.341 9.37 14 12.153 14c1.669 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884.39 0 1.057.192 2.615 1.667C19.11 13.216 19.403 14 20.405 14h2.625c.75 0 1.126-.368.91-1.096-.238-.724-1.088-1.775-2.215-3.022-.612-.71-1.53-1.475-1.809-1.858-.389-.491-.278-.71 0-1.147 0 0 3.2-4.426 3.533-5.929h.001Z"
+                      fill="#83B3D3" />
+                  </svg>
                   <span class="visually-hidden">ВКонтакте</span>
                 </a>
               </li>
               <li class="footer-social-item">
                 <a class="footer-social-button" href="https://t.me/htmlacademy">
+                  <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="18" height="16"
+                    viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.785.6.841 6.747c-1.088.437-1.082 1.044-.2 1.315L4.735 9.34l9.471-5.976c.448-.273.857-.126.521.172l-7.674 6.926h-.001.001l-.282 4.22c.414 0 .596-.19.828-.413l1.989-1.934 4.135 3.055c.763.42 1.31.204 1.5-.706L17.938 1.89C18.216.775 17.513.27 16.786.599Z"
+                      fill="#83B3D3" />
+                  </svg>
                   <span class="visually-hidden">Телеграм</span>
                 </a>
               </li>
               <li class="footer-social-item">
                 <a class="footer-social-button" href="https://www.youtube.com/user/htmlacademyru">
+                  <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="22" height="17"
+                    viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18.607 0H3.174C1.314 0 0 1.594 0 3.4v10.094C0 15.406 1.313 17 3.174 17h15.652C20.468 17 22 15.406 22 13.6V3.4C21.781 1.594 20.468 0 18.607 0ZM7.662 12.537V4.463L14.995 8.5l-7.333 4.037Z"
+                      fill="#83B3D3" />
+                  </svg>
                   <span class="visually-hidden">Ютуб</span>
                 </a>
               </li>
