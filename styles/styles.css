@@ -104,13 +104,13 @@ body {
 }
 
 .navigation-link-current::after {
-position: absolute;
-content: "";
-height: 2px;
-background-color: #756257;
-right: 17px;
-bottom: -1px;
-left: 17px;
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #756257;
+  right: 17px;
+  bottom: -1px;
+  left: 17px;
 }
 
 .main-container {
@@ -133,6 +133,17 @@ left: 17px;
   z-index: 1;
 }
 
+.page-header-logo:hover {
+  opacity: 0.8;
+}
+
+.page-header-logo:focus {
+  opacity: 0.8;
+}
+
+.page-header-logo:active {
+  opacity: 0.5;
+}
 
 .navigation-list {
   display: flex;
@@ -158,21 +169,24 @@ left: 17px;
   min-height: 19px;
 }
 
-/* Есть ощущение, что иконки выровнила неправильно, так как паддинги сделала не по макету */
-
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
-  background-image: url('../images/icon/icon-search.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 11px;
+.navigation-icon {
+  display: block;
+  color: #000000;
+  /* Не успела поправить позиционирование */
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
-  background-image: url('../images/icon/icon-favorite.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 22px;
+.navigation-link:hover .navigation-icon {
+  color: #756157;
 }
+
+.navigation-link:focus .navigation-icon {
+  color: #756157;
+}
+
+.navigation-link:active .navigation-icon {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .navigation-user .navigation-item:nth-child(2) .navigation-link::after {
   content: "12";
   height: 20px;
@@ -848,6 +862,7 @@ left: 17px;
   align-items: center;
   position: relative;
 }
+
 .pagination-container::before {
   content: "";
   position: absolute;
@@ -981,7 +996,8 @@ left: 17px;
 
 .logo-htmlacademy {
   display: block;
-  color: #000000;;
+  color: #000000;
+  ;
 }
 
 .footer-social-button:hover .footer-social-icon {
