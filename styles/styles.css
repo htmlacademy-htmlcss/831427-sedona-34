@@ -90,6 +90,9 @@ body {
   cursor: pointer;
 }
 
+/* Эффекты для иконки Избранное должны действовать и для сердечка,
+и для кружка с цифрой 12? У меня не получилось так сделать */
+
 .navigation-link {
   display: block;
   font-size: 20px;
@@ -606,21 +609,35 @@ body {
   position: relative;
 }
 
-.breadcrumbs-item:nth-child(1) .breadcrumbs-link {
-  background-image: url('../images/icon/icon-homebroads.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 20px;
-}
-
 .breadcrumbs-link {
   display: block;
   font-weight: 400;
   color: inherit;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 20px;
   min-width: 20px;
   min-height: 12px;
+  position: relative;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.6);;
+}
+
+.breadcrumbs-link-icon {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  left: 2px;
 }
 
 .breadcrumbs-item::after {
@@ -630,10 +647,10 @@ body {
   background: url("../images/icon/icon-broads-arrow.svg") no-repeat 50% 100%;
   background-size: 6px 8px;
   position: absolute;
-  top: 7px;
+  top: 6px;
   right: 0;
   bottom: 0;
-  left: -1003px;
+  left: -1005px;
   margin: 0 auto;
 }
 
@@ -658,6 +675,26 @@ body {
   width: 160px;
 }
 
+.button-apply:hover {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.button-apply:focus {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.button-apply:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82B3D3;
+}
+
+.button-apply:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
+}
+
 .button-reset {
   font-family: inherit;
   font-size: 16px;
@@ -665,10 +702,32 @@ body {
   font-weight: 400;
   text-transform: capitalize;
   background-color: transparent;
-  width: 66px;
+  width: 100px;
   border: none;
   padding: 0;
 }
+
+.button-reset:hover {
+  opacity: 0.6;
+}
+
+.button-reset:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+  padding: 4px 0 5px;
+}
+
+.button-reset:active {
+  opacity: 0.3;
+}
+
+/* В стайлгайде не указаны параметры при disabled. Придумать их самой?
+
+.button-reset:disabled {
+
+}
+
+*/
 
 .search-container {
   display: flex;
@@ -721,12 +780,21 @@ body {
   height: 48px;
 }
 
-.sorting-item a {
-  /*
-  Временные границы для удобства позиционирования
-  */
+.sorting-button {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+}
+
+.sorting-button:hover {
+  border-color: #000000;
+}
+
+.sorting-button:focus {
+  border-color: #82B3D3;
+}
+
+.sorting-button:active {
+  border-color: #000000;
 }
 
 .select-control {
@@ -813,6 +881,18 @@ body {
   margin: 0;
 }
 
+.product-card-title:hover {
+  color: #756157;
+}
+
+.product-card-title:focus {
+  color: #756157;
+}
+
+.product-card-title:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .product-card-price {
   display: grid;
   grid-column: span 2;
@@ -843,6 +923,26 @@ body {
   width: 140px;
 }
 
+.product-card-button:hover {
+  color: #ffffff;
+  background-color: #615048;
+}
+
+.product-card-button:focus {
+  color: #ffffff;
+  background-color: #615048;
+}
+
+.product-card-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.product-card-button:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
+}
+
 .button-favorites {
   grid-column: 2 / 3;
   justify-self: end;
@@ -860,8 +960,48 @@ body {
   width: 140px;
 }
 
+.button-favorites:hover {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.button-favorites:focus {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.button-favorites:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82B3D3;
+}
+
+.button-favorites:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
+}
+
 .button-favorites-choose {
   background-color: #7DB54F;
+}
+
+.button-favorites-choose:hover {
+  color: #ffffff;
+  background-color: #6C9E42;
+}
+
+.button-favorites-choose:focus {
+  color: #ffffff;
+  background-color: #6C9E42;
+}
+
+.button-favorites-choose:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #7DB54F;
+}
+
+.button-favorites-choose:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
 }
 
 .product-card {
@@ -874,6 +1014,10 @@ body {
 
 .product-card-image {
   object-fit: contain;
+}
+
+.product-card-image:hover {
+  opacity: 0.8;
 }
 
 .product-card-image-link {
@@ -961,6 +1105,11 @@ body {
   margin-right: 8px;
 }
 
+/* После того, как я добавила линию псевдоэлеиментом до блока при инспектировании
+я больше не могу выбрать элементы этого блока. А также при наведении на элемент
+курсором не вижу эффектов, хотя они добавлены. Почему так?
+*/
+
 .pagination-link {
   display: block;
   color: inherit;
@@ -970,6 +1119,21 @@ body {
   background-color: #82B3D3;
   border-radius: 4px;
   padding: 12px 15px;
+}
+
+.pagination-link:hover {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.pagination-link:focus {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82B3D3;
 }
 
 .pagination-current {
