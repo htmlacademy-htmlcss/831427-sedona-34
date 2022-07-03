@@ -100,7 +100,9 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 20px 17px;
+  padding: 19px 0 20px;
+  margin: 0 17px;
+  position: relative;
 }
 
 .navigation-link-current::after {
@@ -108,9 +110,9 @@ body {
   content: "";
   height: 2px;
   background-color: #756257;
-  right: 17px;
+  right: 0;
   bottom: -1px;
-  left: 17px;
+  left: 0;
 }
 
 .main-container {
@@ -164,15 +166,30 @@ body {
   margin-left: auto;
 }
 
-.navigation-user .navigation-link {
+.navigation-link-user {
   min-width: 19px;
   min-height: 19px;
+  margin: 0;
 }
+
+/* Я выровнила иконки, но есть полное ощущение неправильности -
+иконки выпадают из блоков. То есть я скорее просто подогнала их расположение,
+поэтому уверена, что это неправильно. Но другого решения я не нашла,
+хотя очень старалась :(
+
+Также визуально почему-то кажется, словно обводка иконки сердечка толще, чем у поиска.
+
+*/
 
 .navigation-icon {
   display: block;
   color: #000000;
-  /* Не успела поправить позиционирование */
+  position: absolute;
+  width: 42px;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  left: -48px;
 }
 
 .navigation-link:hover .navigation-icon {
@@ -187,7 +204,7 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link::after {
+.navigation-item-user:nth-child(2) .navigation-link::after {
   content: "12";
   height: 20px;
   width: 20px;
@@ -201,7 +218,11 @@ body {
   top: 1px;
   right: 0;
   bottom: 0;
-  left: 19px;
+  left: -20px;
+}
+
+.navigation-item-user {
+  position: relative;
 }
 
 .navigation-item {
@@ -209,8 +230,12 @@ body {
 }
 
 .navigation-link-want {
+  display: block;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
   color: #ffffff;
   background-color: #756157;
   text-transform: uppercase;
@@ -218,6 +243,27 @@ body {
   border-radius: 4px;
   padding: 9px 15px;
   width: 160px;
+  margin: 0;
+}
+
+.navigation-link-want:hover {
+  color: #ffffff;
+  background-color: #615048;
+}
+
+.navigation-link-want:focus {
+  color: #ffffff;
+  background-color: #615048;
+}
+
+.navigation-link-want:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.navigation-link-want:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
 }
 
 .navigation-link:hover {
@@ -255,19 +301,16 @@ body {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  width: 620px;
+  width: 630px;
   margin: 0 auto 31px;
   padding: 0;
 }
-
-/* Опять в этом блоке текст перестал помещаться в блок, хотя его парамеры не меняла.
-Временно увеличила ширину блока */
 
 .advantages-text {
   text-align: center;
   color: #333333;
   margin: 0 auto;
-  width: 700px;
+  width: 730px;
 }
 
 .advantages-list {
@@ -452,6 +495,26 @@ body {
   padding: 12px 15px;
 }
 
+.search-hotel-link:hover {
+  color: #ffffff;
+  background-color: #615048;
+}
+
+.search-hotel-link:focus {
+  color: #ffffff;
+  background-color: #615048;
+}
+
+.search-hotel-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.search-hotel-link:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
+}
+
 .footer-subscribe {
   width: 800px;
   text-align: center;
@@ -482,6 +545,26 @@ body {
   border-radius: 0 10px 10px 0;
   border: none;
   width: 200px;
+}
+
+.button-subscribe:hover {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.button-subscribe:focus {
+  color: #ffffff;
+  background-color: #68A2CA;
+}
+
+.button-subscribe:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82B3D3;
+}
+
+.button-subscribe:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
 }
 
 .footer-contacts-phone {
@@ -523,7 +606,7 @@ body {
   position: relative;
 }
 
-.breadcrumbs .breadcrumbs-item:nth-child(1) .breadcrumbs-link {
+.breadcrumbs-item:nth-child(1) .breadcrumbs-link {
   background-image: url('../images/icon/icon-homebroads.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -613,21 +696,21 @@ body {
   width: 160px;
 }
 
-.sorting-list .sorting-item:nth-child(1) .button {
+.sorting-item:nth-child(1) .button {
   background-image: url('../images/icon/icon-table.svg');
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 8px;
 }
 
-.sorting-list .sorting-item:nth-child(2) .button {
+.sorting-item:nth-child(2) .button {
   background-image: url('../images/icon/icon-slideshow.svg');
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 8px;
 }
 
-.sorting-list .sorting-item:nth-child(3) .button {
+.sorting-item:nth-child(3) .button {
   background-image: url('../images/icon/icon-list.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -664,7 +747,7 @@ body {
   padding: 0;
 }
 
-.product-list .product-card:nth-child(1) .product-card-star {
+.product-card:nth-child(1) .product-card-star {
   background-image: url('../images/icon/icon-star.svg');
   background-repeat: space;
   background-position: center;
@@ -675,7 +758,7 @@ body {
   width: 89px;
 }
 
-.product-list .product-card:nth-child(2) .product-card-star {
+.product-card:nth-child(2) .product-card-star {
   background-image: url('../images/icon/icon-star.svg');
   background-repeat: space;
   background-position: center;
@@ -686,7 +769,7 @@ body {
   width: 89px;
 }
 
-.product-list .product-card:nth-child(3) .product-card-star {
+.product-card:nth-child(3) .product-card-star {
   background-image: url('../images/icon/icon-star.svg');
   background-repeat: space;
   background-position: center;
@@ -697,7 +780,7 @@ body {
   width: 65px;
 }
 
-.product-list .product-card:nth-child(4) .product-card-star {
+.product-card:nth-child(4) .product-card-star {
   background-image: url('../images/icon/icon-star.svg');
   background-repeat: space;
   background-position: center;
@@ -722,23 +805,6 @@ body {
   height: 17px;
   position: absolute;
 }
-
-/*
-.product-card-star {
-  display: block;
-  grid-column: 1 / 2;
-  justify-self: start;
-  margin: 0;
-  padding: 0;
-  width: 89px;
-  height: 17px;
-  position: absolute;
-  top: 396px;
-  right: 0;
-  bottom: 0;
-  left: 3px;
-}
-*/
 
 .product-card-title {
   font-size: 24px;
