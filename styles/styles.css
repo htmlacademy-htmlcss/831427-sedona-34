@@ -531,6 +531,65 @@ body {
   margin: 0 0 29px;
 }
 
+.field {
+  width: 600px;
+  margin: 0;
+  padding: 20px 22px 19px 22px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #F2F2F2;
+  border-radius: 10px 0 0 10px;
+  border: none;
+}
+
+/*
+Мне не удалось окрасить плейсхолдер в нужный цвет и сделать так,
+чтобы в инпуте при active, disabled, нивалид и валид поменять цвет введенного текста на черный.
+*/
+
+.field::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field:hover {
+  background-color: #E6E6E6;
+}
+
+.field:focus {
+  background-color: #E6E6E6;
+  /*  При взаимодействии с формой при outline смущает,
+  что поле для ввода эмейла визуально сразу кажется больше. Это ок или нет? */
+  outline: 3px solid #83B3D3;
+}
+
+.field:active {
+  /* color: #000000; должен быть для введенного значения */
+  background-color: #ffffff;
+  outline: 2px solid #000000;
+}
+
+.field:disabled {
+  /* color: rgba(0, 0, 0, 0.3); должен быть для плейсхолдера */
+  background-color: #ffffff;
+  outline: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Пока закомментила, так как мешают проверять остальные эффекты
+
+.field:invalid {
+  color: #000000;  должен быть для введенного значения
+  background-color: #F2F2F2;
+}
+
+.field:valid {
+  color: #000000;  должен быть для введенного значения
+  background-color: #F2F2F2;
+}
+
+*/
+
 .button-subscribe {
   font-family: inherit;
   background-color: #82B3D3;
@@ -800,6 +859,13 @@ body {
   color: #333333;
   width: 287px;
   height: 48px;
+  padding: 0 20px;
+  appearance: none;
+  background-image: url('../images/icon/icon-sorting-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .product-list {
@@ -833,15 +899,15 @@ body {
   left: 3px;
 }
 
-.product-card-star-4 {
+.product-card-star-four {
   width: 89px;
 }
 
-.product-card-star-3 {
+.product-card-star-three {
   width: 65px;
 }
 
-.product-card-star-2 {
+.product-card-star-two {
   width: 41px;
 }
 
@@ -1110,8 +1176,16 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  color: #333333;
   width: 160px;
-  padding: 14px 43px 13px 19px;
+  height: 49px;
+  padding: 0 17px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  appearance: none;
+  background-image: url('../images/icon/icon-sorting-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 87% 50%;
 }
 
 .number-hotels {
@@ -1129,6 +1203,10 @@ body {
 
 .page-footer-description {
   margin-bottom: 46px;
+}
+
+.subscribe-form {
+  display: flex;
 }
 
 .footer-contacts {
