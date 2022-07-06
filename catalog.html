@@ -75,12 +75,11 @@
               </ol>
             </div>
           </header>
-          <!-- Фильтр и кнопки не делала, пока нет блок выбора стоимости гостиницы с бегунком -->
           <section class="main-filter">
             <div class="container">
               <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-                <div class="filter-group-conteiner">
+                <div class="container filter-group-container">
                   <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Инфраструктура:</legend>
                     <ul class="catalog-filter-list">
@@ -127,11 +126,33 @@
                       </li>
                     </ul>
                   </fieldset>
-                </div>
-                <div class="button-conteiner">
-                  <!-- Здесь должен быть блок выбора стоимости гостиницы с бегунком -->
-                  <button class="button button-apply" type="submit">Применить</button>
-                  <button class="button button-reset" type="reset">Сбросить</button>
+                  <fieldset class="catalog-filter-group">
+                    <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                    <div class="range">
+                      <div class="range-wrapper-inputs">
+                        <label class="catalog-filter-label">
+                          <input class="range-input" type="number" value="0" name="min-price">
+                          <span class="range-text range-text-min">от</span>
+                          <input class="range-input" type="number" value="9000" name="max-price">
+                          <span class="range-text range-text-max">до</span>
+                        </label>
+                      </div>
+                      <div class="range-scale">
+                        <div class="range-bar" style="left: 0; width: 80%">
+                          <button class="range-toggle toggle-min" type="button">
+                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                          </button>
+                          <button class="range-toggle toggle-max" type="button">
+                            <span class="visually-hidden">Изменить максимальную цену.</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="button-filter">
+                    <button class="button button-apply" type="submit">Применить</button>
+                    <button class="button button-reset" type="reset">Сбросить</button>
+                  </div>
                 </div>
               </form>
             </div>
