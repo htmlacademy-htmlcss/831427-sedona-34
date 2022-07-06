@@ -715,17 +715,55 @@ body {
 
 .catalog-filter-group {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   font-weight: 700;
+  padding: 0;
   text-transform: capitalize;
 }
 
 .control {
+  position: relative;
+  display: block;
+  padding-left: 14px;
+}
+
+.control-lable {
   font-size: 18px;
   line-height: 21px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  background-image: url("../images/icon/icon-control-mark.svg");
+  background-size: 12px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Прописать состояния!!!
+
+.control:hover .control-mark {
+  border-color: #814b18;
+}
+
+.control-input:disabled + .control-mark {
+  border-color: #242424;
+}
+*/
+
+.range {
+  margin-top: 34px;
 }
 
 .range-wrapper-inputs {
@@ -755,7 +793,7 @@ body {
   background-color: transparent;
   border: none;
   appearance: textfield;
-  padding: 14px 19px 13px 17px;
+  padding: 14px 19px 13px 16px;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -833,15 +871,15 @@ body {
 
 .toggle-max {
   top: -8px;
-  right: -6px;
+  right: -7px;
 }
 
 .button-filter {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  width: 160px;
-  align-self: center;
+  flex-direction: column;
+  margin-left: auto;
+  justify-content: flex-end;
 }
 
 .button-apply {
@@ -1211,11 +1249,23 @@ body {
 
 .catalog-filter-list {
   list-style-type: none;
+  padding-left: 1px;
 }
 
 .filter-group-container {
   display: flex;
-  justify-content: space-between;
+}
+
+.catalog-filter-group:nth-child(2) {
+  margin-left: 70px;
+}
+
+.catalog-filter-group:nth-child(3) {
+  margin-left: 175px;
+}
+
+.catalog-filter-group:nth-child(4) {
+  margin-left: 70px;
 }
 
 .pagination-container {
