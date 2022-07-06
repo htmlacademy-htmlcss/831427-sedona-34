@@ -724,13 +724,22 @@ body {
   font-weight: 700;
   padding: 0;
   text-transform: capitalize;
+  margin-bottom: 30px;
 }
 
 .control {
   position: relative;
   display: block;
-  padding-left: 14px;
+  padding-left: 40px;
 }
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+/* Не смогла понять, откуда берется отступ сверху от всего блока с лейблами и кнопками.
+Решила дождаться звонка.
+*/
 
 .control-lable {
   font-size: 18px;
@@ -739,31 +748,67 @@ body {
 
 .control-mark {
   position: absolute;
-  top: 2px;
-  left: 0;
+  top: 0;
+  left: 1px;
   width: 20px;
   height: 20px;
   background-color: #FFFFFF;
   border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/icon/icon-control-mark.svg");
-  background-size: 12px 10px;
+  background-size: 13px 10px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* Прописать состояния!!!
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
 
 .control:hover .control-mark {
-  border-color: #814b18;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:focus .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+
+.control:active .control-mark  {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .control-input:disabled + .control-mark {
-  border-color: #242424;
+  outline: 2px solid rgba(0, 0, 0, 0.3);
 }
+
+.control-radio:hover .control-mark {
+  background-color: #ffffff;
+}
+
+.control-radio:focus .control-mark {
+  background-color: #ffffff;
+  outline: 3px solid #83B3D3;
+}
+
+.control-radio:active .control-mark  {
+  background-color: #ffffff;
+}
+
+/* Добавить состояния радиокнопкам и выпадающему селекту
 */
 
 .range {
-  margin-top: 34px;
+  margin-top: 4px;
 }
 
 .range-wrapper-inputs {
@@ -773,7 +818,6 @@ body {
 
 .catalog-filter-label {
   display: flex;
-  margin-right: 5px;
   position: relative;
   border: 2px solid #FFFFFF;
   border-radius: 4px;
@@ -1249,7 +1293,12 @@ body {
 
 .catalog-filter-list {
   list-style-type: none;
-  padding-left: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .filter-group-container {
@@ -1261,7 +1310,7 @@ body {
 }
 
 .catalog-filter-group:nth-child(3) {
-  margin-left: 175px;
+  margin-left: 177px;
 }
 
 .catalog-filter-group:nth-child(4) {
