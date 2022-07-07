@@ -45,6 +45,7 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #000000;
+  background-color: #f2f2f2;
 }
 
 .body-container {
@@ -336,6 +337,8 @@ body {
   margin: 0 auto 30px;
 }
 
+/* Забыла сделать черточки у  цифер!!! */
+
 .advantages-number {
   font-size: 18px;
   line-height: 21px;
@@ -360,7 +363,7 @@ body {
 
 .advantages-container-second {
   margin: 0 auto;
-  padding: 103px 85px 102px;
+  padding: 103px 84px 102px;
 }
 
 .advantages-value-list {
@@ -514,7 +517,7 @@ body {
   width: 800px;
   text-align: center;
   margin: 0 auto;
-  padding: 94px 0;
+  padding: 93px 0;
 }
 
 .subscribe-first {
@@ -546,13 +549,9 @@ body {
   border: none;
 }
 
-/*
-Мне не удалось окрасить плейсхолдер в нужный цвет и сделать так,
-чтобы в инпуте при active, disabled, нивалид и валид поменять цвет введенного текста на черный.
-*/
-
 .field::placeholder {
   color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
 }
 
 .field:hover {
@@ -561,32 +560,33 @@ body {
 
 .field:focus {
   background-color: #E6E6E6;
-  /*  При взаимодействии с формой при outline смущает,
-  что поле для ввода эмейла визуально сразу кажется больше. Это ок или нет? */
   outline: 3px solid #83B3D3;
 }
 
 .field:active {
-  /* color: #000000; должен быть для введенного значения */
+  color: #000000;
   background-color: #ffffff;
   outline: 2px solid #000000;
 }
 
 .field:disabled {
-  /* color: rgba(0, 0, 0, 0.3); должен быть для плейсхолдера */
+  color: rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
   outline: 3px solid rgba(0, 0, 0, 0.3);
 }
 
+/* Правильно ли сделала или нужно классами? */
+
 .field:invalid {
-  /* color: #000000;  должен быть для введенного значения */
+  color: #000000;
   background-color: #F2F2F2;
 }
 
 .field:valid {
-  /* color: #000000;  должен быть для введенного значения */
+  color: #000000;
   background-color: #F2F2F2;
 }
+
 
 .button-subscribe {
   font-family: inherit;
@@ -625,12 +625,7 @@ body {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-  /*
- Если добавить эти паддинги, номер телефона по Perfect Pixel отображается корректно,
- однако значения не соответствуют макету. Какой вариант лучше:
-паддинги для подгона под Perfect Pixel или же без паддингов, но расхождение по Perfect Pixel на пару px?
-  */
-  padding: 5px 200px 5px 194px;
+  padding: 6px 200px 5px 194px;
 }
 
 .main-inner-container {
@@ -859,7 +854,7 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
-.range-input-min:active {
+.range-input-min:focus:not(:placeholder-shown) {
   background-color: #756257;
   border: 2px solid #FFFFFF;
   border-radius: 4px 0 0 4px;
@@ -880,7 +875,7 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.range-input-max:active {
+.range-input-max:focus:not(:placeholder-shown) {
   background-color: #756257;
   border: 2px solid #FFFFFF;
   border-radius: 0 4px 4px 0;
@@ -1462,6 +1457,9 @@ body {
   background-color: #ffffff;
 }
 
+/* На звонке решили здесь сделать отступ 45px, но при правках увидела, что тогда на моем браузере
+не хватает высоты блока subscribe-first для совпадения с Perfect Pixel */
+
 .page-footer-description {
   margin-bottom: 46px;
 }
@@ -1507,7 +1505,7 @@ body {
 
 .footer-social-icon {
   position: absolute;
-  top: 4px;
+  top: 5px;
   right: 0;
   bottom: 0;
   left: -2px;
@@ -1517,12 +1515,12 @@ body {
 
 .footer-htmlacademy-link {
   width: 115px;
+  padding-top: 1px;
 }
 
 .logo-htmlacademy {
   display: block;
   color: #000000;
-  ;
 }
 
 .footer-social-button:hover .footer-social-icon {
