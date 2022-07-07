@@ -578,19 +578,15 @@ body {
   outline: 3px solid rgba(0, 0, 0, 0.3);
 }
 
-/* Пока закомментила, так как мешают проверять остальные эффекты
-
 .field:invalid {
-  color: #000000;  должен быть для введенного значения
+  /* color: #000000;  должен быть для введенного значения */
   background-color: #F2F2F2;
 }
 
 .field:valid {
-  color: #000000;  должен быть для введенного значения
+  /* color: #000000;  должен быть для введенного значения */
   background-color: #F2F2F2;
 }
-
-*/
 
 .button-subscribe {
   font-family: inherit;
@@ -783,7 +779,7 @@ body {
   outline: 3px solid #83B3D3;
 }
 
-.control:active .control-mark  {
+.control:active .control-mark {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -800,12 +796,9 @@ body {
   outline: 3px solid #83B3D3;
 }
 
-.control-radio:active .control-mark  {
+.control-radio:active .control-mark {
   background-color: #ffffff;
 }
-
-/* Добавить состояния радиокнопкам и выпадающему селекту
-*/
 
 .range {
   margin-top: 4px;
@@ -816,28 +809,37 @@ body {
   justify-content: center;
 }
 
+/* У меня не получилось нормально сделать бордеры у инпутов */
+
 .catalog-filter-label {
   display: flex;
   position: relative;
-  border: 2px solid #FFFFFF;
-  border-radius: 4px;
   padding: 0;
-  width: 288px;
-  /* Здесь смогла выровнять размеры блока только при указании высоты */
-  height: 48px;
 }
 
 .range-input {
   width: 144px;
+  height: 48px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
   background-color: transparent;
-  border: none;
   appearance: textfield;
-  padding: 14px 19px 13px 16px;
+  padding: 14px 40px 13px 16px;
+  outline: none;
+}
+
+.range-input-min {
+  border: 2px solid #ffffff;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-max {
+  border: 2px solid #ffffff;
+  border-radius: 0 4px 4px 0;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -846,8 +848,46 @@ body {
   margin: 0;
 }
 
-.range-input:nth-child(1) {
-  border-right: 2px solid #FFFFFF;
+.range-input-min:hover {
+  border: 2px solid rgb(255, 255, 255, 0.6);
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-min:focus {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 3px #81B3D2;
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-min:active {
+  background-color: #756257;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-min:disabled {
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.range-input-max:hover {
+  border: 2px solid rgb(255, 255, 255, 0.6);
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input-max:focus {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 3px #81B3D2;
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input-max:active {
+  background-color: #756257;
+  border: 2px solid #FFFFFF;
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input-max:disabled {
+  background-color: rgb(255, 255, 255, 0.3);
 }
 
 .range-text {
@@ -858,17 +898,17 @@ body {
 }
 
 .range-text-min {
-  top: 10px;
+  top: 13px;
   right: 0;
   bottom: 0;
-  left: 112px;
+  left: 114px;
 }
 
 .range-text-max {
-  top: 10px;
+  top: 13px;
   right: 0;
   bottom: 0;
-  left: 250px;
+  left: 110px;
 }
 
 .range-scale {
@@ -894,6 +934,8 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Состояния сбоят (бордер по центру и фокус)  */
 
 .range-toggle:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -984,10 +1026,8 @@ body {
   opacity: 0.3;
 }
 
-/* Значение disabled может совпадать со значением active?  */
-
 .button-reset:disabled {
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 .search-container {
@@ -1010,9 +1050,7 @@ body {
   display: flex;
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  margin-left: auto;
-  /* Объединить мэрджин. Не стала менять, так как пока сами элементы скрыты */
+  margin: 0 0 0 auto;
   width: 160px;
 }
 
@@ -1065,13 +1103,30 @@ body {
   color: #333333;
   width: 287px;
   height: 48px;
-  padding: 0 20px;
+  padding: 0 40px 0 20px;
   appearance: none;
   background-image: url('../images/icon/icon-sorting-arrow.svg');
   background-repeat: no-repeat;
   background-position: 95% 50%;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+}
+
+.select-control:hover {
+  border-color: #68A2CA;
+}
+
+.select-control:focus {
+  border: 2px solid #68A2CA;
+}
+
+.select-control:active {
+  border: 2px solid #3F5E72;
+}
+
+.select-control:disabled {
+  opacity: 0.3;
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .product-list {
@@ -1387,19 +1442,10 @@ body {
 }
 
 .select-control-second {
-  font-family: inherit;
-  font-size: 18px;
   font-weight: 400;
-  line-height: 21px;
-  color: #333333;
   width: 160px;
   height: 49px;
-  padding: 0 17px;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-  appearance: none;
-  background-image: url('../images/icon/icon-sorting-arrow.svg');
-  background-repeat: no-repeat;
+  padding: 0 40px 0 17px;
   background-position: 87% 50%;
 }
 
