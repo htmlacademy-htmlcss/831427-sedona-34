@@ -1026,7 +1026,7 @@ body {
 .search-container {
   display: flex;
   align-items: center;
-  padding: 55px 0 0 2px;
+  padding: 55px 0 52px 2px;
 }
 
 .search-results {
@@ -1300,7 +1300,7 @@ body {
   display: grid;
   row-gap: 16px;
   grid-template-columns: 150px 150px;
-  padding: 20px;
+  padding: 20px 17px 15px 23px;
   position: relative;
 }
 
