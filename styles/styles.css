@@ -1148,10 +1148,10 @@ body {
   background-image: url('../images/icon/icon-star.svg');
   background-repeat: space;
   background-position: center;
-  top: 396px;
+  top: 391px;
   right: 0;
   bottom: 0;
-  left: 3px;
+  left: 0;
 }
 
 .product-card-star-four {
@@ -1300,12 +1300,13 @@ body {
   display: grid;
   row-gap: 16px;
   grid-template-columns: 150px 150px;
-  padding: 20px 17px 15px 23px;
+  padding: 20px 17px 20px 23px;
   position: relative;
 }
 
 .product-card-image {
   object-fit: contain;
+  display: block;
 }
 
 .product-card-image:hover {
