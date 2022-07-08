@@ -531,7 +531,9 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 29px;
+  margin: 0 auto;
+  margin-bottom: 29px;
+  width: 480px;
 }
 
 .field {
@@ -573,7 +575,7 @@ body {
   outline: 3px solid rgba(0, 0, 0, 0.3);
 }
 
-/* Правильно ли сделала или нужно классами? */
+/* Правильно ли сделала валидацию или нужно классами (где-то в чате вроде как советовали классами)? */
 
 .field:invalid {
   color: #000000;
@@ -584,7 +586,6 @@ body {
   color: #000000;
   background-color: #F2F2F2;
 }
-
 
 .button-subscribe {
   font-family: inherit;
@@ -726,10 +727,6 @@ body {
   border-radius: 50%;
 }
 
-/* Не смогла понять, откуда берется отступ сверху от всего блока с лейблами и кнопками.
-Решила дождаться звонка.
-*/
-
 .control-lable {
   font-size: 18px;
   line-height: 21px;
@@ -801,8 +798,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
-/* У меня не получилось нормально сделать бордеры у инпутов */
 
 .catalog-filter-label {
   display: flex;
@@ -1128,7 +1123,7 @@ body {
   grid-template-columns: repeat(3, 340px);
   column-gap: 18px;
   list-style-type: none;
-  margin: 0 0 96px;
+  margin: 0 0 66px;
   padding: 0;
 }
 
@@ -1377,7 +1372,7 @@ body {
 
 .pagination {
   display: flex;
-  width: 370px;
+  width: 400px;
   margin: 0;
   padding: 0;
 }
@@ -1394,8 +1389,11 @@ body {
 }
 
 .pagination-item:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 9px;
 }
+
+/* Не смогла сделать так, чтобы все цифры стояли ровно, либо "1" едет, либо "10".
+Также и с отступами */
 
 .pagination-link {
   display: block;
@@ -1405,7 +1403,7 @@ body {
   height: 60px;
   background-color: #82B3D3;
   border-radius: 4px;
-  padding: 12px 15px;
+  padding: 11px 19px 12px 18px;
 }
 
 .pagination-link:hover {
@@ -1461,7 +1459,9 @@ body {
 не хватает высоты блока subscribe-first для совпадения с Perfect Pixel */
 
 .page-footer-description {
+  margin: 0 auto;
   margin-bottom: 46px;
+  width: 480px;
 }
 
 .subscribe-form {
