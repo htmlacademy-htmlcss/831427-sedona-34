@@ -797,16 +797,27 @@ body {
 .range-wrapper-inputs {
   display: flex;
   justify-content: center;
-  background-image: url("../images/icon/icon-range-line.svg");
-  background-size: 48px 60px;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
 }
 
 .catalog-filter-label {
   display: flex;
   position: relative;
   padding: 0;
+}
+
+.catalog-filter-label:nth-child(1):after {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/icon/icon-range-line.svg");
+  background-size: 48px 60px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 121px;
 }
 
 .range-input {
@@ -853,7 +864,8 @@ body {
 }
 
 /* 1) При вводе цифр работает и фокус, и :focus:not(:placeholder-shown). Так и должно быть?
-  2) Заменила бордер на линию, она немного перекрыывает бордер у интупа при ховере, это норм?
+  2) Заменила бордер на псевдоэлемент, он немного перекрывает бордер у интупа при ховере,
+  особенно у ange-input-max, это норм? И при фокусе совсем некрасиво
  */
 
 .range-input-min:focus:not(:placeholder-shown) {
@@ -936,8 +948,6 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-
-/* Состояния сбоят (бордер по центру и фокус)  */
 
 .range-toggle:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
