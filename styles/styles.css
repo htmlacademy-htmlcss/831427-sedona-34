@@ -337,8 +337,6 @@ body {
   margin: 0 auto 30px;
 }
 
-/* Забыла сделать черточки у  цифер!!! */
-
 .advantages-number {
   font-size: 18px;
   line-height: 21px;
@@ -720,7 +718,7 @@ body {
 
 .control {
   position: relative;
-  display: block;
+  display: flex;
   padding-left: 40px;
 }
 
@@ -900,10 +898,10 @@ body {
 }
 
 .range-text-max {
-  top: 13px;
+  top: 12px;
   right: 0;
   bottom: 0;
-  left: 110px;
+  left: 109px;
 }
 
 .range-scale {
@@ -1348,7 +1346,7 @@ body {
 }
 
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .filter-group-container {
