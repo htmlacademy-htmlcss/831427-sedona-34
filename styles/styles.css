@@ -236,26 +236,6 @@ body {
   margin: 0;
 }
 
-.navigation-link-want:hover {
-  color: #ffffff;
-  background-color: #615048;
-}
-
-.navigation-link-want:focus {
-  color: #ffffff;
-  background-color: #615048;
-}
-
-.navigation-link-want:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #756157;
-}
-
-.navigation-link-want:disabled {
-  color: #ffffff;
-  background-color: #E5E5E5;
-}
-
 .navigation-link:hover {
   color: #756157;
 }
@@ -491,26 +471,6 @@ body {
   padding: 12px 15px;
 }
 
-.search-hotel-link:hover {
-  color: #ffffff;
-  background-color: #615048;
-}
-
-.search-hotel-link:focus {
-  color: #ffffff;
-  background-color: #615048;
-}
-
-.search-hotel-link:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #756157;
-}
-
-.search-hotel-link:disabled {
-  color: #ffffff;
-  background-color: #E5E5E5;
-}
-
 .footer-subscribe {
   width: 800px;
   text-align: center;
@@ -575,7 +535,9 @@ body {
   outline: 3px solid rgba(0, 0, 0, 0.3);
 }
 
-/* Правильно ли сделала валидацию или нужно классами (где-то в чате вроде как советовали классами)? */
+/* Правильно ли сделала валидацию или нужно классами (где-то в чате вроде как советовали классами)?
+Сейчас, если раскомментить, мешает ховеру. И почему-то эти стили одинаковые по стайлгайду,
+что кажется странным
 
 .field:invalid {
   color: #000000;
@@ -586,6 +548,7 @@ body {
   color: #000000;
   background-color: #F2F2F2;
 }
+ */
 
 .button-subscribe {
   font-family: inherit;
@@ -992,22 +955,22 @@ body {
   margin-bottom: 20px;
 }
 
-.button-apply:hover {
+.button-condition:hover {
   color: #ffffff;
   background-color: #68A2CA;
 }
 
-.button-apply:focus {
+.button-condition:focus {
   color: #ffffff;
   background-color: #68A2CA;
 }
 
-.button-apply:active {
+.button-condition:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
 }
 
-.button-apply:disabled {
+.button-condition:disabled {
   color: #ffffff;
   background-color: #E5E5E5;
 }
@@ -1234,22 +1197,22 @@ body {
   width: 140px;
 }
 
-.product-card-button:hover {
+.button-condition-second:hover {
   color: #ffffff;
   background-color: #615048;
 }
 
-.product-card-button:focus {
+.button-condition-second:focus {
   color: #ffffff;
   background-color: #615048;
 }
 
-.product-card-button:active {
+.button-condition-second:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
 }
 
-.product-card-button:disabled {
+.button-condition-second:disabled {
   color: #ffffff;
   background-color: #E5E5E5;
 }
@@ -1269,26 +1232,6 @@ body {
   border: none;
   font-family: inherit;
   width: 140px;
-}
-
-.button-favorites:hover {
-  color: #ffffff;
-  background-color: #68A2CA;
-}
-
-.button-favorites:focus {
-  color: #ffffff;
-  background-color: #68A2CA;
-}
-
-.button-favorites:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #82B3D3;
-}
-
-.button-favorites:disabled {
-  color: #ffffff;
-  background-color: #E5E5E5;
 }
 
 .button-favorites-choose {
@@ -1605,8 +1548,8 @@ body {
 
 .modal {
   position: relative;
-  margin: auto;
-  padding: 62px 70px 70px;
+  margin: 396px auto;
+  padding: 62px 70px 70px 68px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
@@ -1616,22 +1559,41 @@ body {
   width: 715px;
 }
 
+.modal-content {
+  width: 575px;
+}
+
 .modal-button-close {
   position: absolute;
   padding: 0;
-  top: 0;
-  right: 0;
+  top: 55px;
+  right: 70px;
   width: 53px;
   height: 53px;
   background-color: #F2F2F2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/icon/icon-button-close.svg");
-  background-size: 13px 13px;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: #000000;
   cursor: pointer;
-  /* Здесь при помощи мэрджинов поставить кнопку не место */
+}
+
+.modal-button-close:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-button-close:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-button-close:active {
+  color: rgb(0, 0, 0, 0.3);
+  background-color: #E6E6E6;
+}
+
+.modal-button-close:disabled {
+  opacity: 0.3;
+  background-color: #E5E5E5;
 }
 
 .modal-title {
@@ -1642,4 +1604,142 @@ body {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: 155px 133px 155px 133px;
+  row-gap: 40px;
+  position: relative;
+}
+
+.modal-label-checkin {
+  grid-column: 1 / 2;
+  align-self: center;
+}
+
+.input-checkin {
+  grid-column: 2 / 5;
+  padding: 15px 50px 15px 20px;
+}
+
+.modal-label-departure {
+  grid-column: 1 / 2;
+  align-self: center;
+}
+
+.input-departure {
+  grid-column: 2 / 5;
+  padding: 14px 50px 15px 19px;
+}
+
+.modal-form .field-group {
+  margin: 0;
+}
+
+.modal-form .field {
+  width: 420px;
+  border-radius: 4px;
+}
+
+.modal-form .field-number {
+  width: 133px;
+  padding: 15px 62px 14px 61px;
+}
+
+.field-number::-webkit-outer-spin-button,
+.field-number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.modal-label {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.modal-text {
+  font-size: 16px;
+  line-height: 21px;
+  position: absolute;
+}
+
+.modal-checkin-text {
+  color: #FF5757;
+  grid-column: 1 / -1;
+  top: 59px;
+  right: 0;
+  bottom: 0;
+  left: 156px;
+}
+
+.modal-departure-text {
+  color: #333333;
+  grid-column: 1 / -1;
+  top: 149px;
+  right: 0;
+  bottom: 0;
+  left: 156px;
+}
+
+.modal-label-adults {
+  grid-column: 1 / 2;
+  align-self: center;
+}
+
+.field-number-adults {
+  grid-column: 2 / 3;
+}
+
+.modal-label-children {
+  grid-column: 3 / 4;
+  align-self: center;
+  justify-self: center;
+  /* Немного криво стоит по горизонтали. Подвигать после добавления тултипа */
+}
+
+.field-number-children {
+  grid-column: 4 / 5;
+}
+
+.modal-field {
+  background-image: url("../images/icon/icon-calendar.svg");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: right 4% bottom 50%;
+}
+
+/* Почему кнопка перестает срабатывать на ховер со 2-го по 5-й столбец грида?
+А также блокируются интупы с датой "1 сентября 2020" и кол-во взрослых и детей */
+
+.modal-button {
+  grid-column: 1 / -1;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #83B3D3;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  width: 575px;
+  margin: 0;
+}
+
+.modal-button:hover {
+  background-color: #68A2CA;
+}
+
+.modal-button:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.modal-button:active {
+  color: rgb(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+}
+
+.modal-button:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
 }

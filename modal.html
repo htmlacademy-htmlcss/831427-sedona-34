@@ -195,13 +195,35 @@
       </footer>
       <div class="modal-container modal-container-close">
         <div class="modal modal-search">
-          <button class="modal-button-close" type="button">
+          <button class="modal-button-close" type="button"><svg aria-hidden="true" focusable="false" width="13"
+              height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" />
+            </svg>
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="modal-label modal-label-checkin" for="date-checkin">Дата Заезда:</label>
+              <input class="field modal-field input-checkin" type="text" id="date-checkin" name="checkin"
+                value="27 апреля 2020">
+              <p class="field-group modal-text modal-checkin-text">Мы не можем отправить вас в
+                прошлое.</p>
+              <label class="modal-label modal-label-departure" for="date-departure">Дата Выезда:</label>
+              <input class="field modal-field input-departure" type="text" id="date-departure" name="departure"
+                value="1 сентября 2021">
+              <p class="field-group modal-text modal-departure-text">На эти даты есть свободные номера.
+                Пока есть.</p>
+              <label class="modal-label modal-label-adults" for="number-adults">Взрослые:</label>
+              <input class="field field-number field-number-adults" type="number" id="number-adults" name="adults"
+                value="2">
+              <label class="modal-label modal-label-children" for="number-children">Дети:</label>
+              <input class="field field-number field-number-children" type="number" id="number-children" name="children"
+                value="1">
+              <button class="button modal-button" type="submit">Найти</button>
+            </form>
           </section>
-          <form  action="https://echo.htmlacademy.ru/" metod="post"></form>
         </div>
       </div>
     </div>
