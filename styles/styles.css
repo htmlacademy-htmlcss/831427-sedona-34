@@ -797,6 +797,10 @@ body {
 .range-wrapper-inputs {
   display: flex;
   justify-content: center;
+  background-image: url("../images/icon/icon-range-line.svg");
+  background-size: 48px 60px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .catalog-filter-label {
@@ -815,7 +819,7 @@ body {
   color: #ffffff;
   background-color: transparent;
   appearance: textfield;
-  padding: 14px 40px 13px 16px;
+  padding: 14px 40px 14px 16px;
   outline: none;
 }
 
@@ -827,6 +831,7 @@ body {
 
 .range-input-max {
   border: 2px solid #ffffff;
+  border-left: none;
   border-radius: 0 4px 4px 0;
 }
 
@@ -843,19 +848,28 @@ body {
 
 .range-input-min:focus {
   border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 3px #81B3D2;
+  box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
   border-radius: 4px 0 0 4px;
 }
+
+/* 1) При вводе цифр работает и фокус, и :focus:not(:placeholder-shown). Так и должно быть?
+  2) Заменила бордер на линию, она немного перекрыывает бордер у интупа при ховере, это норм?
+ */
 
 .range-input-min:focus:not(:placeholder-shown) {
   background-color: #756257;
   border: 2px solid #FFFFFF;
   border-radius: 4px 0 0 4px;
+  /*
+  box-shadow: none;
+  */
 }
 
 .range-input-min:disabled {
   background-color: rgb(255, 255, 255, 0.3);
 }
+
+/* Почему при ховере и фокусе плейсхолдер "9000" смещается? */
 
 .range-input-max:hover {
   border: 2px solid rgb(255, 255, 255, 0.6);
@@ -864,7 +878,7 @@ body {
 
 .range-input-max:focus {
   border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 3px #81B3D2;
+  box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
   border-radius: 0 4px 4px 0;
 }
 
