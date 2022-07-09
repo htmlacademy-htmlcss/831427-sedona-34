@@ -1526,7 +1526,12 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-/* Модальное окно */
+/* Модальное окно
+
+.modal-container-close {
+  display: none;
+}
+*/
 
 .modal-container {
   display: grid;
@@ -1538,13 +1543,6 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
   z-index: 2;
 }
-
-/* Раскомментить при сдаче
-
-.modal-container-close {
-  display: none;
-}
-*/
 
 .modal {
   position: relative;
@@ -1668,8 +1666,6 @@ body {
   color: #FF5757;
   grid-column: 1 / -1;
   top: 59px;
-  right: 0;
-  bottom: 0;
   left: 156px;
 }
 
@@ -1677,8 +1673,6 @@ body {
   color: #333333;
   grid-column: 1 / -1;
   top: 149px;
-  right: 0;
-  bottom: 0;
   left: 156px;
 }
 
@@ -1691,11 +1685,12 @@ body {
   grid-column: 2 / 3;
 }
 
+/* Не поняла, как здесь сделать учет переполнения */
+
 .modal-label-children {
   grid-column: 3 / 4;
   align-self: center;
-  justify-self: center;
-  /* Немного криво стоит по горизонтали. Подвигать после добавления тултипа */
+  padding-left: 29px;
 }
 
 .field-number-children {
@@ -1708,9 +1703,6 @@ body {
   background-repeat: no-repeat;
   background-position: right 4% bottom 50%;
 }
-
-/* Почему кнопка перестает срабатывать на ховер со 2-го по 5-й столбец грида?
-А также блокируются интупы с датой "1 сентября 2020" и кол-во взрослых и детей */
 
 .modal-button {
   grid-column: 1 / -1;
@@ -1832,7 +1824,7 @@ body {
 .tooltip {
   position: absolute;
   margin-top: 2px;
-  margin-left: 10px;
+  margin-left: 6px;
   width: 25px;
   height: 25px;
 }
@@ -1883,4 +1875,17 @@ body {
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
+}
+
+.tooltip-text:after {
+  content: '';
+  background-image: url("../images/icon/icon-tooltip.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
