@@ -1743,3 +1743,91 @@ body {
   color: #ffffff;
   background-color: #E5E5E5;
 }
+
+.modal-button-input {
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  color: rgb(0, 0, 0, 0.3);
+}
+
+.button-minus {
+  grid-column: 2 / 3;
+  top: 195px;
+  right: 0;
+  bottom: 0;
+  left: 15px;
+}
+
+.button-plus {
+  grid-column: 2 / 3;
+  top: 195px;
+  right: 0;
+  bottom: 0;
+  left: 97px;
+}
+
+.button-minus-second {
+  grid-column: 4 / 5;
+  top: 195px;
+  right: 0;
+  bottom: 0;
+  left: 15px;
+}
+
+.button-plus-second {
+  grid-column: 4 / 5;
+  top: 195px;
+  right: 0;
+  bottom: 0;
+  left: 97px;
+}
+
+
+.icon-button-minus {
+  width: 13px;
+  height: 1px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 20px;
+  left: 4px;
+}
+
+.icon-button-plus {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  left: 4px;
+}
+
+/* Прописать состояния
+.modal-button-input:hover {
+  color: #000000;
+  opacity: 1;
+}
+
+.modal-button-input:focus {
+  color: #000000;
+  opacity: 1;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.modal-button-input:active {
+  color: rgb(0, 0, 0, 0.3);
+}
+
+.modal-button-input:disabled {
+  color: rgb(255, 255, 255, 0.3);
+}
+
+*/
