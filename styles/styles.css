@@ -59,7 +59,7 @@ body {
 }
 
 .container {
-  width: 1060px;
+  width: 1056px;
   margin: 0 auto;
 }
 
@@ -753,39 +753,18 @@ body {
   background-color: #ffffff;
 }
 
-.range {
-  margin-top: 4px;
-}
-
 .range-wrapper-inputs {
   display: flex;
-  justify-content: center;
-  position: relative;
+  margin-bottom: 28px;
 }
 
 .catalog-filter-label {
-  display: flex;
   position: relative;
-  padding: 0;
-}
-
-.catalog-filter-label:nth-child(1):after {
-  content: "";
-  width: 48px;
-  height: 48px;
-  background-image: url("../images/icon/icon-range-line.svg");
-  background-size: 48px 60px;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 121px;
 }
 
 .range-input {
   width: 144px;
-  height: 48px;
+  min-height: 48px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -793,19 +772,18 @@ body {
   color: #ffffff;
   background-color: transparent;
   appearance: textfield;
-  padding: 14px 40px 14px 16px;
+  padding: 11.5px 17px;
   outline: none;
+  border: 2px solid #ffffff;
 }
 
 .range-input-min {
-  border: 2px solid #ffffff;
-  border-right: none;
   border-radius: 4px 0 0 4px;
 }
 
 .range-input-max {
-  border: 2px solid #ffffff;
-  border-left: none;
+  width: 146px;
+  margin-left: -2px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -815,89 +793,48 @@ body {
   margin: 0;
 }
 
-.range-input-min:hover {
-  border: 2px solid rgb(255, 255, 255, 0.6);
-  border-radius: 4px 0 0 4px;
+.range-input::placeholder {
+  color: #ffffff;
 }
 
-.range-input-min:focus {
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
-  border-radius: 4px 0 0 4px;
+.range-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
-/* 1) При вводе цифр работает и фокус, и :focus:not(:placeholder-shown). Так и должно быть?
-  2) Заменила бордер на псевдоэлемент, он немного перекрывает бордер у интупа при ховере,
-  особенно у ange-input-max, это норм? И при фокусе совсем некрасиво
- */
+.range-input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px #81b3d2 inset;
+  outline: 3px solid #81b3d2;
+}
 
-.range-input-min:focus:not(:placeholder-shown) {
+.range-input:focus:not(:placeholder-shown) {
   background-color: #756257;
-  border: 2px solid #FFFFFF;
-  border-radius: 4px 0 0 4px;
-  /*
+  outline: none;
   box-shadow: none;
-  */
 }
 
-.range-input-min:disabled {
-  background-color: rgb(255, 255, 255, 0.3);
-}
-
-/* Почему при ховере и фокусе плейсхолдер "9000" смещается? */
-
-.range-input-max:hover {
-  border: 2px solid rgb(255, 255, 255, 0.6);
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-max:focus {
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-max:focus:not(:placeholder-shown) {
-  background-color: #756257;
-  border: 2px solid #FFFFFF;
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-max:disabled {
+.range-input:disabled {
   background-color: rgb(255, 255, 255, 0.3);
 }
 
 .range-text {
   color: rgb(255, 255, 255, 0.3);
   position: absolute;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.range-text-min {
-  top: 13px;
-  right: 0;
-  bottom: 0;
-  left: 114px;
-}
-
-.range-text-max {
-  top: 12px;
-  right: 0;
-  bottom: 0;
-  left: 109px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
 }
 
 .range-scale {
   position: relative;
   height: 4px;
-  margin-top: 28px;
   background-color: rgb(255, 255, 255, 0.3);
-  width: 288px;
 }
 
 .range-bar {
   position: absolute;
+  left: 0;
+  width: 227px;
   height: 4px;
   background-color: #ffffff;
 }
@@ -910,6 +847,8 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .range-toggle:hover {
@@ -926,14 +865,12 @@ body {
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
-.toggle-min {
-  top: -8px;
+.toggle-max {
+  right: 0;
+  transform: translate(50%, -50%);
 }
 
-.toggle-max {
-  top: -8px;
-  right: -7px;
-}
+/* проверить этот блок */
 
 .button-filter {
   display: flex;
@@ -1526,12 +1463,11 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-/* Модальное окно
+/* Модальное окно */
 
 .modal-container-close {
   display: none;
 }
-*/
 
 .modal-container {
   display: grid;
