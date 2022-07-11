@@ -1008,6 +1008,8 @@ body {
   border-color: #000000;
 }
 
+/* Учесть, что правит еще и нижнюю сортировку */
+
 .select-control {
   font-family: inherit;
   font-size: 18px;
@@ -1015,12 +1017,11 @@ body {
   color: #333333;
   width: 290px;
   height: 48px;
-  padding: 0 40px 0 20px;
-  margin-top: -3px;
+  padding: 0 40px 0 18px;
   appearance: none;
   background-image: url('../images/icon/icon-sorting-arrow.svg');
   background-repeat: no-repeat;
-  background-position: 94% 50%;
+  background-position: 93% 50%;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
@@ -1272,11 +1273,11 @@ body {
   padding: 30px 0 25px;
   align-items: center;
   border-top: 1px solid #E6E6E6;
+  justify-content: space-between;
 }
 
 .pagination {
   display: flex;
-  width: 400px;
   margin: 0;
   padding: 0;
 }
@@ -1288,26 +1289,23 @@ body {
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
-  width: 60px;
   list-style-type: none;
 }
 
 .pagination-item:not(:last-child) {
-  margin-right: 9px;
+  margin-right: 8px;
 }
-
-/* Не смогла сделать так, чтобы все цифры стояли ровно, либо "1" едет, либо "10".
-Также и с отступами */
 
 .pagination-link {
   display: block;
   color: inherit;
   text-decoration: none;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   background-color: #82B3D3;
   border-radius: 4px;
-  padding: 11px 19px 12px 18px;
+  padding: 10px 19px;
+  text-align: center;
 }
 
 .pagination-link:hover {
@@ -1332,8 +1330,7 @@ body {
 
 .number-hotels-container {
   display: flex;
-  width: 386px;
-  margin-left: auto;
+
   padding: 0;
   align-items: center;
 }
@@ -1342,7 +1339,6 @@ body {
   font-weight: 400;
   width: 160px;
   height: 49px;
-  padding: 0 40px 0 17px;
   background-position: 87% 50%;
 }
 
