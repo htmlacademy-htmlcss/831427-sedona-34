@@ -59,7 +59,7 @@ body {
 }
 
 .container {
-  width: 1056px;
+  width: 1060px;
   margin: 0 auto;
 }
 
@@ -509,24 +509,19 @@ body {
   border: none;
 }
 
-.field::placeholder {
-  color: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-}
-
-.field:hover {
-  background-color: #E6E6E6;
+.sfield:hover {
+  background-color: #e6e6e6;
 }
 
 .field:focus {
-  background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3 inset;
+  outline: none;
 }
 
-.field:active {
-  color: #000000;
+.field:not(:placeholder-shown) {
   background-color: #ffffff;
-  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px #333333 inset;
 }
 
 .field:disabled {
@@ -534,21 +529,6 @@ body {
   background-color: #ffffff;
   outline: 3px solid rgba(0, 0, 0, 0.3);
 }
-
-/* Правильно ли сделала валидацию или нужно классами (где-то в чате вроде как советовали классами)?
-Сейчас, если раскомментить, мешает ховеру. И почему-то эти стили одинаковые по стайлгайду,
-что кажется странным
-
-.field:invalid {
-  color: #000000;
-  background-color: #F2F2F2;
-}
-
-.field:valid {
-  color: #000000;
-  background-color: #F2F2F2;
-}
- */
 
 .button-subscribe {
   font-family: inherit;
@@ -680,13 +660,17 @@ body {
   margin-bottom: 30px;
 }
 
+.catalog-filter-price {
+  margin-bottom: 34px;
+}
+
 .control {
   position: relative;
   display: flex;
   padding-left: 40px;
 }
 
-.control-input[type="radio"] + .control-mark {
+.input-radio[type="radio"] + .control-mark {
   border-radius: 50%;
 }
 
@@ -705,52 +689,68 @@ body {
   border-radius: 4px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
+.input-checkbox[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/icon/icon-control-mark.svg");
   background-size: 13px 10px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.control-input[type="radio"]:checked + .control-mark::before {
+.input-checkbox:hover + .control-mark {
+  opacity: 0.6;
+}
+
+.input-checkbox:focus + .control-mark {
+  opacity: 0.6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.input-checkbox:focus:not(:focus-visible) + .control-mark {
+  box-shadow: none;
+}
+
+.input-checkbox:focus-visible + .control-mark {
+  opacity: 0.6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.input-checkbox + .control-mark:active {
+  opacity: 0.3;
+  box-shadow: none;
+}
+
+.input-checkbox:disabled + .control-mark,
+.input-checkbox:disabled:hover + .control-mark {
+  opacity: 0.1;
+}
+
+.input-radio:checked + .control-mark::before {
+  content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  background-color: #3F5E72;
+  background-color: #3f5e72;
   border-radius: 50%;
-  content: "";
 }
 
-.control:hover .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
+.input-radio:focus + .control-mark {
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.control:focus .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-  outline: 3px solid #83B3D3;
+.input-radio:focus:not(:focus-visible) + .control-mark {
+  box-shadow: none;
 }
 
-.control:active .control-mark {
-  background-color: rgba(255, 255, 255, 0.3);
+.input-radio:focus-visible + .control-mark {
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.control-input:disabled + .control-mark {
-  outline: 2px solid rgba(0, 0, 0, 0.3);
-}
-
-.control-radio:hover .control-mark {
-  background-color: #ffffff;
-}
-
-.control-radio:focus .control-mark {
-  background-color: #ffffff;
-  outline: 3px solid #83B3D3;
-}
-
-.control-radio:active .control-mark {
-  background-color: #ffffff;
+.input-radio:disabled + .control-mark,
+.input-radio:disabled:hover + .control-mark {
+  opacity: 0.1;
 }
 
 .range-wrapper-inputs {
@@ -823,6 +823,8 @@ body {
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .range-scale {
@@ -866,18 +868,16 @@ body {
 }
 
 .toggle-max {
-  right: 0;
+  right: 3px;
   transform: translate(50%, -50%);
 }
 
-/* проверить этот блок */
-
 .button-filter {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin-left: auto;
   justify-content: flex-end;
+  align-self: flex-end;
+  margin-left: auto;
 }
 
 .button-apply {
@@ -888,8 +888,8 @@ body {
   padding: 14px 15px;
   border-radius: 4px;
   border: none;
-  width: 160px;
-  margin-bottom: 20px;
+  min-width: 160px;
+  margin-bottom: 10px;
 }
 
 .button-condition:hover {
@@ -917,25 +917,41 @@ body {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: none;
   background-color: transparent;
   width: 100px;
   border: none;
-  padding: 0;
+  border-radius: 4px;
+  position: relative;
+  top: 5px;
+  align-self: center;
+  padding: 5px 10px;
 }
 
 .button-reset:hover {
   opacity: 0.6;
+  background-color: transparent;
 }
 
 .button-reset:focus {
-  border: 3px solid #83B3D3;
-  border-radius: 4px;
-  padding: 4px 0 5px;
+  background-color: transparent;
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.button-reset:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.button-reset:focus-visible {
+  box-shadow: 0 0 0 3px #83b3d3 inset;
+  outline: none;
 }
 
 .button-reset:active {
   opacity: 0.3;
+  background-color: transparent;
 }
 
 .button-reset:disabled {
@@ -1008,20 +1024,18 @@ body {
   border-color: #000000;
 }
 
-/* Учесть, что правит еще и нижнюю сортировку */
-
 .select-control {
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   width: 290px;
-  height: 48px;
-  padding: 0 40px 0 18px;
+  height: 49px;
+  padding: 9px 40px 14px 20px;
   appearance: none;
   background-image: url('../images/icon/icon-sorting-arrow.svg');
   background-repeat: no-repeat;
-  background-position: 93% 50%;
+  background-position: 93% 45%;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
@@ -1267,9 +1281,12 @@ body {
   margin-left: 70px;
 }
 
+/* Почему-то цийра "1" на табается */
+
 .pagination-container {
   display: flex;
-  margin: 0;
+  width: 1056px;
+  margin: 0 auto;
   padding: 30px 0 25px;
   align-items: center;
   border-top: 1px solid #E6E6E6;
@@ -1354,9 +1371,6 @@ body {
 .subscribe-second {
   background-color: #ffffff;
 }
-
-/* На звонке решили здесь сделать отступ 45px, но при правках увидела, что тогда на моем браузере
-не хватает высоты блока subscribe-first для совпадения с Perfect Pixel */
 
 .page-footer-description {
   margin: 0 auto;
