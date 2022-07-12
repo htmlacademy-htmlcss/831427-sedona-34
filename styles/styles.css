@@ -252,7 +252,7 @@ body {
   background-image: url("../images/background/background-index-decoration.svg"),
     url("../images/background/background-index.jpg");
   background-position: bottom, center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #d9e7f0;
   color: #000000;
@@ -577,7 +577,7 @@ body {
 
 .main-inner-container {
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #d9e7f0;
   background-image: url("../images/background/background-filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1079,18 +1079,13 @@ body {
 .product-card-star {
   display: block;
   grid-column: 1 / 2;
-  justify-self: start;
+  align-self: center;
   margin: 0;
   padding: 0;
   height: 17px;
-  position: absolute;
   background-image: url('../images/icon/icon-star.svg');
   background-repeat: space;
   background-position: center;
-  top: 391px;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .product-card-star-four {
