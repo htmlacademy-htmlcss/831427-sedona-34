@@ -509,7 +509,7 @@ body {
   border: none;
 }
 
-.sfield:hover {
+.field:hover {
   background-color: #e6e6e6;
 }
 
@@ -1475,12 +1475,8 @@ body {
 
 /* Модальное окно */
 
-.modal-container-close {
-  display: none;
-}
-
 .modal-container {
-  display: grid;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -1490,9 +1486,15 @@ body {
   z-index: 2;
 }
 
+/*  Для закрытия окна
+.modal-container-close {
+  display: none;
+}
+*/
+
 .modal {
   position: relative;
-  margin: 396px auto;
+  margin: auto;
   padding: 62px 70px 70px 68px;
   background-color: #ffffff;
   border-radius: 30px;
@@ -1503,14 +1505,10 @@ body {
   width: 715px;
 }
 
-.modal-content {
-  width: 575px;
-}
-
 .modal-button-close {
   position: absolute;
   padding: 0;
-  top: 55px;
+  top: 54px;
   right: 70px;
   width: 53px;
   height: 53px;
@@ -1531,13 +1529,15 @@ body {
 }
 
 .modal-button-close:focus {
-  background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
 }
 
 .modal-button-close:active {
   color: rgb(0, 0, 0, 0.3);
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
+  box-shadow: none;
 }
 
 .modal-button-close:disabled {
@@ -1546,7 +1546,8 @@ body {
 }
 
 .modal-title {
-  margin: 0 0 63px 0;
+  margin: 0;
+  margin-bottom: 63px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
@@ -1557,145 +1558,236 @@ body {
 
 .modal-form {
   display: grid;
-  grid-template-columns: 155px 133px 155px 133px;
+  grid-template-columns: 288px 230px;
+  column-gap: 56px;
   row-gap: 40px;
+  width: 575px;
+  margin: 0 auto;
+}
+
+.modal-form-container {
   position: relative;
-}
-
-/*
-
-.sfield:hover {
-  background-color: #e6e6e6;
-}
-
-.field:focus {
-  background-color: #e6e6e6;
-  box-shadow: 0 0 0 3px #83b3d3 inset;
-  outline: none;
-}
-
-.field:not(:placeholder-shown) {
-  background-color: #ffffff;
-  box-shadow: 0 0 0 2px #333333 inset;
-}
-
-.field:disabled {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #ffffff;
-  outline: 3px solid rgba(0, 0, 0, 0.3);
-}
-*/
-
-.modal-label-checkin {
-  grid-column: 1 / 2;
-  align-self: center;
-}
-
-.input-checkin {
-  grid-column: 2 / 5;
-  padding: 15px 50px 15px 20px;
-}
-
-.modal-label-departure {
-  grid-column: 1 / 2;
-  align-self: center;
-}
-
-.input-departure {
-  grid-column: 2 / 5;
-  padding: 14px 50px 15px 19px;
-}
-
-.modal-form .field-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0;
 }
 
-.modal-form .field {
-  width: 420px;
-  border-radius: 4px;
+.form-container-checkin {
+  grid-column: 1 / -1;
 }
 
-.modal-form .field-number {
-  width: 133px;
-  padding: 15px 62px 14px 61px;
-}
-
-.field-number::-webkit-outer-spin-button,
-.field-number::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
+.form-container-departure {
+  grid-column: 1 / -1;
 }
 
 .modal-label {
   font-size: 20px;
+  line-height: 26px;
   font-weight: 700;
+  text-transform: capitalize;
+  color: #000000;
 }
 
-.modal-text {
-  font-size: 16px;
+.form-modal-input {
+  position: relative;
+  padding: 12px 19px 13px;
+  min-height: 50px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 21px;
-  position: absolute;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  appearance: textfield;
 }
 
-.modal-checkin-text {
-  color: #FF5757;
-  grid-column: 1 / -1;
-  top: 59px;
-  left: 156px;
+.form-modal-input:hover {
+  background-color: #e6e6e6;
 }
 
-.modal-departure-text {
-  color: #333333;
-  grid-column: 1 / -1;
-  top: 149px;
-  left: 156px;
+.form-modal-input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
 }
 
-.modal-label-adults {
-  grid-column: 1 / 2;
-  align-self: center;
+.form-modal-input:not(:placeholder-shown) {
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
 }
 
-.field-number-adults {
-  grid-column: 2 / 3;
+.form-modal-input:focus:not(:placeholder-shown) {
+  background-color: #ffffff;
+  border-color: #000000;
+  outline: none;
 }
 
-
-.modal-label-children {
-  grid-column: 3 / 4;
-  align-self: center;
-  padding-left: 29px;
-  max-width: 64px;
+.form-modal-input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  outline: 3px solid rgba(0, 0, 0, 0.3);
 }
 
-.field-number-children {
-  grid-column: 4 / 5;
+.form-modal__input::placeholder {
+  color: #000000;
+  opacity: 0.6;
 }
 
-.modal-field {
+.modal-input-date {
+  min-width: 420px;
   background-image: url("../images/icon/icon-calendar.svg");
   background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position: right 4% bottom 50%;
 }
 
-.form-modal-input {
-  background-color: #F2F2F2;
-  border-radius: 4px;
-  border: none;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000000;
-  appearance: none;
+.modal-input-number {
+  width: 100%;
+  text-align: center;
 }
 
-/* После замены типа инпута вместо number на text появилась иконка, которая не убирается */
-.form-modal-input::-webkit-outer-spin-button,
-.form-modal-input::-webkit-inner-spin-button {
-  appearance: none;
+.modal-input-number:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-input-number:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-input-number:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  outline: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+
+.modal-text {
+  font-size: 16px;
+  line-height: 21px;
+  position: absolute;
   margin: 0;
+  top: 95%;
+  left: 155px;
+  transform: translateY(50%);
+}
+
+.modal-checkin-text {
+  color: #FF5757;
+}
+
+.modal-departure-text {
+  color: #333333;
+}
+
+.number-container {
+  position: relative;
+  width: 133px;
+}
+
+.modal-form-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  opacity: 0.3;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.modal-form-button:hover {
+  opacity: 1;
+}
+
+.modal-form-button:focus {
+  border-color: #83b3d3;
+  outline: none;
+}
+
+.modal-form-button:active {
+  border-color: transparent;
+  opacity: 0.2;
+}
+
+.button-minus {
+  background-image: url("../images/icon/icon-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 1px;
+  left: 13px;
+}
+
+.button-plus {
+  background-image: url("../images/icon/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 13px;
+  right: 13px;
+}
+
+.tooltip-button {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  right: 6px;
+  top: -2px;
+  border: none;
+  background-color: #83B3D3;
+  border-radius: 50%;
+  background-image: url("../images/icon/icon-info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1px 9px;
+  cursor: pointer;
+}
+
+.tooltip-button:hover {
+  background-color: #68a2ca;
+}
+
+.tooltip-button:hover + .tooltip-text,
+.tooltip-button:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  padding: 15px 18px 23px 22px;
+  top: 54px;
+  right: 35px;
+  width: 256px;
+  position: absolute;
+  display: none;
+}
+
+.tooltip-text:after {
+  content: '';
+  background-image: url("../images/icon/icon-tooltip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-button {
@@ -1728,158 +1820,4 @@ body {
 .modal-button:disabled {
   color: #ffffff;
   background-color: #E5E5E5;
-}
-
-.modal-button-input {
-  width: 25px;
-  height: 25px;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  color: rgb(0, 0, 0, 0.3);
-}
-
-.button-minus {
-  grid-column: 2 / 3;
-  top: 195px;
-  right: 0;
-  bottom: 0;
-  left: 15px;
-}
-
-.button-plus {
-  grid-column: 2 / 3;
-  top: 195px;
-  right: 0;
-  bottom: 0;
-  left: 97px;
-}
-
-.button-minus-second {
-  grid-column: 4 / 5;
-  top: 195px;
-  right: 0;
-  bottom: 0;
-  left: 15px;
-}
-
-.button-plus-second {
-  grid-column: 4 / 5;
-  top: 195px;
-  right: 0;
-  bottom: 0;
-  left: 97px;
-}
-
-
-.icon-button-minus {
-  width: 13px;
-  height: 1px;
-  position: absolute;
-  top: 10px;
-  right: 0;
-  bottom: 20px;
-  left: 4px;
-}
-
-.icon-button-plus {
-  width: 13px;
-  height: 13px;
-  position: absolute;
-  top: 4px;
-  right: 0;
-  bottom: 0;
-  left: 4px;
-}
-
-.modal-button-input:hover {
-  color: #000000;
-}
-
-/* При фокусе плюсы и минусы стоят не по центру кнопки. Как их выровнять? */
-
-.modal-button-input:focus {
-  color: #000000;
-  outline: 3px solid #83B3D3;
-  border-radius: 4px;
-}
-
-.modal-button-input:active {
-  color: rgb(0, 0, 0, 0.2);
-}
-
-.modal-button-input:disabled {
-  color: rgb(255, 255, 255, 0.3);
-}
-
-.tooltip {
-  position: absolute;
-  margin-top: 2px;
-  margin-left: 6px;
-  width: 25px;
-  height: 25px;
-}
-
-.tooltip-toggle {
-  border: none;
-  background-color: #83B3D3;
-  padding: 0;
-  margin: 0;
-  display: block;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-}
-
-.tooltip-toggle:hover {
-  background-color: #68A2CA;
-}
-
-.tooltip-icon {
-  color: #ffffff;
-  width: 1px;
-  height: 9px;
-  display: block;
-  margin: 0 auto;
-}
-
-.tooltip-text {
-  background-color: #333333;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 256px;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-  text-transform: none;
-  padding: 15px 18px 18px 22px;
-  position: absolute;
-  top: 100%;
-  margin-top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-}
-
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
-  display: block;
-}
-
-.tooltip-text:after {
-  content: '';
-  background-image: url("../images/icon/icon-tooltip.svg");
-  width: 19px;
-  height: 9px;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
