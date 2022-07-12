@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <base href="https://htmlacademy-htmlcss.github.io/831427-sedona-34/10/">
 </head>
 
@@ -81,7 +83,8 @@
               <ul class="advantages-value-list">
                 <li class="advantages-value-item advantages-container-first advantages-value-second">
                   <h4 class="advantages-value-title advantages-icon-home">Жильё</h4>
-                  <p class="advantages-value-description">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!
+                  <p class="advantages-value-description advantages-description-second">Рекомендуем пожить в настоящем
+                    мотеле, всё как в кино!
                   </p>
                 </li>
                 <li class="advantages-value-item advantages-container-first">
@@ -194,6 +197,72 @@
           </div>
         </section>
       </footer>
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-search">
+          <button class="modal-button-close" type="button">
+            <svg class="icon-button-close" aria-hidden="true" focusable="false" width="13" height="13"
+              viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" />
+            </svg>
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="modal-form-container form-container-checkin">
+                <label class="modal-label " for="date-checkin">Дата Заезда:</label>
+                <input class="form-modal-input modal-input-date" type="text" id="date-checkin" name="checkin"
+                  placeholder="Укажите дату" value="27 апреля 2020" required>
+                <p class="modal-text modal-checkin-text">Мы не можем отправить вас в
+                  прошлое.</p>
+              </div>
+              <div class="modal-form-container form-container-departure">
+                <label class="modal-label" for="date-departure">Дата Выезда:</label>
+                <input class="form-modal-input modal-input-date" type="text" id="date-departure" name="departure"
+                  placeholder="Укажите дату" value="1 сентября 2021" required>
+                <p class="modal-text modal-departure-text">На эти даты есть свободные номера.
+                  Пока есть.</p>
+              </div>
+              <div class="modal-form-container">
+                <label class="modal-label" for="number-people">Взрослые:</label>
+                <div class="number-container">
+                  <button class="modal-form-button button-minus" type="button">
+                    <span class="visually-hidden">Минус.</span>
+                  </button>
+                  <input class="form-modal-input modal-input-number" type="text" id="number-people" name="adults"
+                    value="2">
+                  <button class="modal-form-button button-plus" type="button">
+                    <span class="visually-hidden">Плюс.</span>
+                  </button>
+                </div>
+              </div>
+              <div class="modal-form-container">
+                <label class="modal-label" for="number-children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-button" type="button" aria-labelledby="tooltip-label">
+                    <span class="visually-hidden">Дополнительная информация.</span>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
+                    вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+                <div class="number-container">
+                  <button class="modal-form-button button-minus" type="button">
+                    <span class="visually-hidden">Минус.</span>
+                  </button>
+                  <input class="form-modal-input modal-input-number" type="text" id="number-children" name="children"
+                    value="1">
+                  <button class="modal-form-button button-plus" type="button">
+                    <span class="visually-hidden">Плюс.</span>
+                  </button>
+                </div>
+              </div>
+              <button class="button modal-button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 
