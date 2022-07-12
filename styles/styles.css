@@ -45,6 +45,7 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #000000;
+  background-color: #f2f2f2;
 }
 
 .body-container {
@@ -235,26 +236,6 @@ body {
   margin: 0;
 }
 
-.navigation-link-want:hover {
-  color: #ffffff;
-  background-color: #615048;
-}
-
-.navigation-link-want:focus {
-  color: #ffffff;
-  background-color: #615048;
-}
-
-.navigation-link-want:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #756157;
-}
-
-.navigation-link-want:disabled {
-  color: #ffffff;
-  background-color: #E5E5E5;
-}
-
 .navigation-link:hover {
   color: #756157;
 }
@@ -326,6 +307,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  background-color: #82B3D3;
 }
 
 .advantages-title {
@@ -348,6 +330,10 @@ body {
   margin: 0 auto;
 }
 
+.advantages-description-second {
+  padding: 0 30px;
+}
+
 .advantages-value-item {
   width: 400px;
   margin: 0 auto;
@@ -360,7 +346,7 @@ body {
 
 .advantages-container-second {
   margin: 0 auto;
-  padding: 103px 85px 102px;
+  padding: 103px 84px 102px;
 }
 
 .advantages-value-list {
@@ -490,31 +476,11 @@ body {
   padding: 12px 15px;
 }
 
-.search-hotel-link:hover {
-  color: #ffffff;
-  background-color: #615048;
-}
-
-.search-hotel-link:focus {
-  color: #ffffff;
-  background-color: #615048;
-}
-
-.search-hotel-link:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #756157;
-}
-
-.search-hotel-link:disabled {
-  color: #ffffff;
-  background-color: #E5E5E5;
-}
-
 .footer-subscribe {
   width: 800px;
   text-align: center;
   margin: 0 auto;
-  padding: 94px 0;
+  padding: 93px 0;
 }
 
 .subscribe-first {
@@ -530,7 +496,9 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 29px;
+  margin: 0 auto;
+  margin-bottom: 29px;
+  width: 480px;
 }
 
 .field {
@@ -546,46 +514,25 @@ body {
   border: none;
 }
 
-/*
-Мне не удалось окрасить плейсхолдер в нужный цвет и сделать так,
-чтобы в инпуте при active, disabled, нивалид и валид поменять цвет введенного текста на черный.
-*/
-
-.field::placeholder {
-  color: rgba(0, 0, 0, 0.6);
-}
-
 .field:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .field:focus {
-  background-color: #E6E6E6;
-  /*  При взаимодействии с формой при outline смущает,
-  что поле для ввода эмейла визуально сразу кажется больше. Это ок или нет? */
-  outline: 3px solid #83B3D3;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3 inset;
+  outline: none;
 }
 
-.field:active {
-  /* color: #000000; должен быть для введенного значения */
+.field:not(:placeholder-shown) {
   background-color: #ffffff;
-  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px #333333 inset;
 }
 
 .field:disabled {
-  /* color: rgba(0, 0, 0, 0.3); должен быть для плейсхолдера */
+  color: rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
   outline: 3px solid rgba(0, 0, 0, 0.3);
-}
-
-.field:invalid {
-  /* color: #000000;  должен быть для введенного значения */
-  background-color: #F2F2F2;
-}
-
-.field:valid {
-  /* color: #000000;  должен быть для введенного значения */
-  background-color: #F2F2F2;
 }
 
 .button-subscribe {
@@ -625,12 +572,7 @@ body {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-  /*
- Если добавить эти паддинги, номер телефона по Perfect Pixel отображается корректно,
- однако значения не соответствуют макету. Какой вариант лучше:
-паддинги для подгона под Perfect Pixel или же без паддингов, но расхождение по Perfect Pixel на пару px?
-  */
-  padding: 5px 200px 5px 194px;
+  padding: 6px 200px 5px 194px;
 }
 
 .main-inner-container {
@@ -723,19 +665,19 @@ body {
   margin-bottom: 30px;
 }
 
+.catalog-filter-price {
+  margin-bottom: 34px;
+}
+
 .control {
   position: relative;
-  display: block;
+  display: flex;
   padding-left: 40px;
 }
 
-.control-input[type="radio"] + .control-mark {
+.input-radio[type="radio"] + .control-mark {
   border-radius: 50%;
 }
-
-/* Не смогла понять, откуда берется отступ сверху от всего блока с лейблами и кнопками.
-Решила дождаться звонка.
-*/
 
 .control-lable {
   font-size: 18px;
@@ -752,74 +694,82 @@ body {
   border-radius: 4px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
+.input-checkbox[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/icon/icon-control-mark.svg");
   background-size: 13px 10px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.control-input[type="radio"]:checked + .control-mark::before {
+.input-checkbox:hover + .control-mark {
+  opacity: 0.6;
+}
+
+.input-checkbox:focus + .control-mark {
+  opacity: 0.6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.input-checkbox:focus:not(:focus-visible) + .control-mark {
+  box-shadow: none;
+}
+
+.input-checkbox:focus-visible + .control-mark {
+  opacity: 0.6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.input-checkbox + .control-mark:active {
+  opacity: 0.3;
+  box-shadow: none;
+}
+
+.input-checkbox:disabled + .control-mark,
+.input-checkbox:disabled:hover + .control-mark {
+  opacity: 0.1;
+}
+
+.input-radio:checked + .control-mark::before {
+  content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  background-color: #3F5E72;
+  background-color: #3f5e72;
   border-radius: 50%;
-  content: "";
 }
 
-.control:hover .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
+.input-radio:focus + .control-mark {
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.control:focus .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-  outline: 3px solid #83B3D3;
+.input-radio:focus:not(:focus-visible) + .control-mark {
+  box-shadow: none;
 }
 
-.control:active .control-mark {
-  background-color: rgba(255, 255, 255, 0.3);
+.input-radio:focus-visible + .control-mark {
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.control-input:disabled + .control-mark {
-  outline: 2px solid rgba(0, 0, 0, 0.3);
-}
-
-.control-radio:hover .control-mark {
-  background-color: #ffffff;
-}
-
-.control-radio:focus .control-mark {
-  background-color: #ffffff;
-  outline: 3px solid #83B3D3;
-}
-
-.control-radio:active .control-mark {
-  background-color: #ffffff;
-}
-
-.range {
-  margin-top: 4px;
+.input-radio:disabled + .control-mark,
+.input-radio:disabled:hover + .control-mark {
+  opacity: 0.1;
 }
 
 .range-wrapper-inputs {
   display: flex;
-  justify-content: center;
+  margin-bottom: 28px;
 }
 
-/* У меня не получилось нормально сделать бордеры у инпутов */
-
 .catalog-filter-label {
-  display: flex;
   position: relative;
-  padding: 0;
 }
 
 .range-input {
   width: 144px;
-  height: 48px;
+  min-height: 48px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -827,18 +777,18 @@ body {
   color: #ffffff;
   background-color: transparent;
   appearance: textfield;
-  padding: 14px 40px 13px 16px;
+  padding: 11.5px 17px;
   outline: none;
+  border: 2px solid #ffffff;
 }
 
 .range-input-min {
-  border: 2px solid #ffffff;
-  border-right: none;
   border-radius: 4px 0 0 4px;
 }
 
 .range-input-max {
-  border: 2px solid #ffffff;
+  width: 146px;
+  margin-left: -2px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -848,79 +798,50 @@ body {
   margin: 0;
 }
 
-.range-input-min:hover {
-  border: 2px solid rgb(255, 255, 255, 0.6);
-  border-radius: 4px 0 0 4px;
+.range-input::placeholder {
+  color: #ffffff;
 }
 
-.range-input-min:focus {
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 3px #81B3D2;
-  border-radius: 4px 0 0 4px;
+.range-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
-.range-input-min:active {
+.range-input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px #81b3d2 inset;
+  outline: 3px solid #81b3d2;
+}
+
+.range-input:focus:not(:placeholder-shown) {
   background-color: #756257;
-  border: 2px solid #FFFFFF;
-  border-radius: 4px 0 0 4px;
+  outline: none;
+  box-shadow: none;
 }
 
-.range-input-min:disabled {
-  background-color: rgb(255, 255, 255, 0.3);
-}
-
-.range-input-max:hover {
-  border: 2px solid rgb(255, 255, 255, 0.6);
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-max:focus {
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 3px #81B3D2;
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-max:active {
-  background-color: #756257;
-  border: 2px solid #FFFFFF;
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-max:disabled {
+.range-input:disabled {
   background-color: rgb(255, 255, 255, 0.3);
 }
 
 .range-text {
   color: rgb(255, 255, 255, 0.3);
   position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
   font-size: 18px;
   line-height: 21px;
-}
-
-.range-text-min {
-  top: 13px;
-  right: 0;
-  bottom: 0;
-  left: 114px;
-}
-
-.range-text-max {
-  top: 13px;
-  right: 0;
-  bottom: 0;
-  left: 110px;
 }
 
 .range-scale {
   position: relative;
   height: 4px;
-  margin-top: 28px;
   background-color: rgb(255, 255, 255, 0.3);
-  width: 288px;
 }
 
 .range-bar {
   position: absolute;
+  left: 0;
+  width: 227px;
   height: 4px;
   background-color: #ffffff;
 }
@@ -933,9 +854,9 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
-/* Состояния сбоят (бордер по центру и фокус)  */
 
 .range-toggle:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -951,21 +872,17 @@ body {
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
-.toggle-min {
-  top: -8px;
-}
-
 .toggle-max {
-  top: -8px;
-  right: -7px;
+  right: 3px;
+  transform: translate(50%, -50%);
 }
 
 .button-filter {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin-left: auto;
   justify-content: flex-end;
+  align-self: flex-end;
+  margin-left: auto;
 }
 
 .button-apply {
@@ -976,26 +893,26 @@ body {
   padding: 14px 15px;
   border-radius: 4px;
   border: none;
-  width: 160px;
-  margin-bottom: 20px;
+  min-width: 160px;
+  margin-bottom: 10px;
 }
 
-.button-apply:hover {
+.button-condition:hover {
   color: #ffffff;
   background-color: #68A2CA;
 }
 
-.button-apply:focus {
+.button-condition:focus {
   color: #ffffff;
   background-color: #68A2CA;
 }
 
-.button-apply:active {
+.button-condition:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
 }
 
-.button-apply:disabled {
+.button-condition:disabled {
   color: #ffffff;
   background-color: #E5E5E5;
 }
@@ -1005,25 +922,41 @@ body {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: none;
   background-color: transparent;
   width: 100px;
   border: none;
-  padding: 0;
+  border-radius: 4px;
+  position: relative;
+  top: 5px;
+  align-self: center;
+  padding: 5px 10px;
 }
 
 .button-reset:hover {
   opacity: 0.6;
+  background-color: transparent;
 }
 
 .button-reset:focus {
-  border: 3px solid #83B3D3;
-  border-radius: 4px;
-  padding: 4px 0 5px;
+  background-color: transparent;
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.button-reset:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.button-reset:focus-visible {
+  box-shadow: 0 0 0 3px #83b3d3 inset;
+  outline: none;
 }
 
 .button-reset:active {
   opacity: 0.3;
+  background-color: transparent;
 }
 
 .button-reset:disabled {
@@ -1033,7 +966,7 @@ body {
 .search-container {
   display: flex;
   align-items: center;
-  padding: 50px 0 56px;
+  padding: 55px 0 52px 2px;
 }
 
 .search-results {
@@ -1101,13 +1034,13 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  width: 287px;
-  height: 48px;
-  padding: 0 40px 0 20px;
+  width: 290px;
+  height: 49px;
+  padding: 9px 40px 14px 20px;
   appearance: none;
   background-image: url('../images/icon/icon-sorting-arrow.svg');
   background-repeat: no-repeat;
-  background-position: 95% 50%;
+  background-position: 93% 45%;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
@@ -1134,7 +1067,7 @@ body {
   grid-template-columns: repeat(3, 340px);
   column-gap: 18px;
   list-style-type: none;
-  margin: 0 0 96px;
+  margin: 0 0 66px;
   padding: 0;
 }
 
@@ -1154,10 +1087,10 @@ body {
   background-image: url('../images/icon/icon-star.svg');
   background-repeat: space;
   background-position: center;
-  top: 396px;
+  top: 391px;
   right: 0;
   bottom: 0;
-  left: 3px;
+  left: 0;
 }
 
 .product-card-star-four {
@@ -1221,22 +1154,22 @@ body {
   width: 140px;
 }
 
-.product-card-button:hover {
+.button-condition-second:hover {
   color: #ffffff;
   background-color: #615048;
 }
 
-.product-card-button:focus {
+.button-condition-second:focus {
   color: #ffffff;
   background-color: #615048;
 }
 
-.product-card-button:active {
+.button-condition-second:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
 }
 
-.product-card-button:disabled {
+.button-condition-second:disabled {
   color: #ffffff;
   background-color: #E5E5E5;
 }
@@ -1256,26 +1189,6 @@ body {
   border: none;
   font-family: inherit;
   width: 140px;
-}
-
-.button-favorites:hover {
-  color: #ffffff;
-  background-color: #68A2CA;
-}
-
-.button-favorites:focus {
-  color: #ffffff;
-  background-color: #68A2CA;
-}
-
-.button-favorites:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #82B3D3;
-}
-
-.button-favorites:disabled {
-  color: #ffffff;
-  background-color: #E5E5E5;
 }
 
 .button-favorites-choose {
@@ -1306,12 +1219,13 @@ body {
   display: grid;
   row-gap: 16px;
   grid-template-columns: 150px 150px;
-  padding: 20px;
+  padding: 20px 17px 20px 23px;
   position: relative;
 }
 
 .product-card-image {
   object-fit: contain;
+  display: block;
 }
 
 .product-card-image:hover {
@@ -1353,7 +1267,7 @@ body {
 }
 
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .filter-group-container {
@@ -1374,15 +1288,16 @@ body {
 
 .pagination-container {
   display: flex;
-  margin: 0;
+  width: 1056px;
+  margin: 0 auto;
   padding: 30px 0 25px;
   align-items: center;
   border-top: 1px solid #E6E6E6;
+  justify-content: space-between;
 }
 
 .pagination {
   display: flex;
-  width: 370px;
   margin: 0;
   padding: 0;
 }
@@ -1394,7 +1309,6 @@ body {
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
-  width: 60px;
   list-style-type: none;
 }
 
@@ -1406,11 +1320,12 @@ body {
   display: block;
   color: inherit;
   text-decoration: none;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   background-color: #82B3D3;
   border-radius: 4px;
-  padding: 12px 15px;
+  padding: 10px 19px;
+  text-align: center;
 }
 
 .pagination-link:hover {
@@ -1435,8 +1350,7 @@ body {
 
 .number-hotels-container {
   display: flex;
-  width: 386px;
-  margin-left: auto;
+
   padding: 0;
   align-items: center;
 }
@@ -1445,7 +1359,6 @@ body {
   font-weight: 400;
   width: 160px;
   height: 49px;
-  padding: 0 40px 0 17px;
   background-position: 87% 50%;
 }
 
@@ -1463,7 +1376,9 @@ body {
 }
 
 .page-footer-description {
+  margin: 0 auto;
   margin-bottom: 46px;
+  width: 480px;
 }
 
 .subscribe-form {
@@ -1507,7 +1422,7 @@ body {
 
 .footer-social-icon {
   position: absolute;
-  top: 4px;
+  top: 5px;
   right: 0;
   bottom: 0;
   left: -2px;
@@ -1517,12 +1432,12 @@ body {
 
 .footer-htmlacademy-link {
   width: 115px;
+  padding-top: 1px;
 }
 
 .logo-htmlacademy {
   display: block;
   color: #000000;
-  ;
 }
 
 .footer-social-button:hover .footer-social-icon {
@@ -1559,4 +1474,351 @@ body {
 
 .footer-htmlacademy-link:active .logo-htmlacademy {
   color: rgba(117, 97, 87, 0.3);
+}
+
+/* Модальное окно */
+
+.modal-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 70px 70px 68px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-search {
+  width: 715px;
+}
+
+.modal-button-close {
+  position: absolute;
+  padding: 0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 50%;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+}
+
+.icon-button-close {
+  margin: auto;
+}
+
+.modal-button-close:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-button-close:focus {
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.modal-button-close:active {
+  color: rgb(0, 0, 0, 0.3);
+  background-color: #e6e6e6;
+  box-shadow: none;
+}
+
+.modal-button-close:disabled {
+  opacity: 0.3;
+  background-color: #E5E5E5;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 63px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: 288px 230px;
+  column-gap: 56px;
+  row-gap: 40px;
+  width: 575px;
+  margin: 0 auto;
+}
+
+.modal-form-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.form-container-checkin {
+  grid-column: 1 / -1;
+}
+
+.form-container-departure {
+  grid-column: 1 / -1;
+}
+
+.modal-label {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.form-modal-input {
+  position: relative;
+  padding: 12px 19px 13px;
+  min-height: 50px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  appearance: textfield;
+}
+
+.form-modal-input:hover {
+  background-color: #e6e6e6;
+}
+
+.form-modal-input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.form-modal-input:not(:placeholder-shown) {
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+}
+
+.form-modal-input:focus:not(:placeholder-shown) {
+  background-color: #ffffff;
+  border-color: #000000;
+  outline: none;
+}
+
+.form-modal-input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  outline: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.form-modal__input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+.modal-input-date {
+  min-width: 420px;
+  background-image: url("../images/icon/icon-calendar.svg");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: right 4% bottom 50%;
+}
+
+.modal-input-number {
+  width: 100%;
+  text-align: center;
+}
+
+.modal-input-number:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-input-number:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-input-number:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  outline: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+
+.modal-text {
+  font-size: 16px;
+  line-height: 21px;
+  position: absolute;
+  margin: 0;
+  top: 95%;
+  left: 155px;
+  transform: translateY(50%);
+}
+
+.modal-checkin-text {
+  color: #FF5757;
+}
+
+.modal-departure-text {
+  color: #333333;
+}
+
+.number-container {
+  position: relative;
+  width: 133px;
+}
+
+.modal-form-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  opacity: 0.3;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.modal-form-button:hover {
+  opacity: 1;
+}
+
+.modal-form-button:focus {
+  border-color: #83b3d3;
+  outline: none;
+}
+
+.modal-form-button:active {
+  border-color: transparent;
+  opacity: 0.2;
+}
+
+.button-minus {
+  background-image: url("../images/icon/icon-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 1px;
+  left: 13px;
+}
+
+.button-plus {
+  background-image: url("../images/icon/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 13px;
+  right: 13px;
+}
+
+.tooltip-button {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  right: 6px;
+  top: -2px;
+  border: none;
+  background-color: #83B3D3;
+  border-radius: 50%;
+  background-image: url("../images/icon/icon-info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1px 9px;
+  cursor: pointer;
+}
+
+.tooltip-button:hover {
+  background-color: #68a2ca;
+}
+
+.tooltip-button:hover + .tooltip-text,
+.tooltip-button:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  padding: 15px 18px 23px 22px;
+  top: 54px;
+  right: 35px;
+  width: 256px;
+  position: absolute;
+  display: none;
+}
+
+.tooltip-text:after {
+  content: '';
+  background-image: url("../images/icon/icon-tooltip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-button {
+  grid-column: 1 / -1;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #83B3D3;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  width: 575px;
+  margin: 0;
+}
+
+.modal-button:hover {
+  background-color: #68A2CA;
+}
+
+.modal-button:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.modal-button:active {
+  color: rgb(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+}
+
+.modal-button:disabled {
+  color: #ffffff;
+  background-color: #E5E5E5;
 }
