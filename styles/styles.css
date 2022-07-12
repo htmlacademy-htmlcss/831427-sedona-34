@@ -307,6 +307,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  background-color: #82B3D3;
 }
 
 .advantages-title {
@@ -327,6 +328,10 @@ body {
   font-size: 18px;
   line-height: 21px;
   margin: 0 auto;
+}
+
+.advantages-description-second {
+  padding: 0 30px;
 }
 
 .advantages-value-item {
@@ -1281,8 +1286,6 @@ body {
   margin-left: 70px;
 }
 
-/* Почему-то цийра "1" на табается */
-
 .pagination-container {
   display: flex;
   width: 1056px;
@@ -1486,11 +1489,9 @@ body {
   z-index: 2;
 }
 
-/*  Для закрытия окна
 .modal-container-close {
   display: none;
 }
-*/
 
 .modal {
   position: relative;
